@@ -1,4 +1,5 @@
 import type { WritableAtom } from 'nanostores'
-export type WritableAtom$<Value> = WritableAtom<Value>&{
+import { ReadableAtom$ } from '../ReadableAtom$'
+export interface WritableAtom$<Value> extends ReadableAtom$<Value>,WritableAtom<Value> {
 	$:Value
 }
