@@ -1,3 +1,4 @@
+export * from 'nanostores'
 export * from './atom$'
 export * from './computed$'
 export * from './ExtractReadableAtomValue'
