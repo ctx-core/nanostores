@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 0.2.0
+
+### Minor Changes
+
+- - subscribe_wait,subscribe_wait_timeout
+
 ## 0.1.1
 
 ### Patch Changes
