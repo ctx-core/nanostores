@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 0.3.1
+
+### Patch Changes
+
+- .js + .d.ts instead of .ts
+
 ## 0.3.0
 
 ### Minor Changes
