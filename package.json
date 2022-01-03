@@ -40,7 +40,7 @@
 		"nanostores": "^0.5.8"
 	},
 	"devDependencies": {
-		"@ctx-core/function": "workspace:^20.2.21",
+		"@ctx-core/function": "workspace:^20.2.22",
 		"@sinonjs/fake-timers": "^8.1.0",
 		"@types/sinonjs__fake-timers": "^8.1.1",
 		"c8": "^7.11.0",
