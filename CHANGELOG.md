@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 0.3.4
+
+### Patch Changes
+
+- sideEffects = false
+
 ## 0.3.3
 
 ### Patch Changes
