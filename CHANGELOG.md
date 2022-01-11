@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 0.3.6
+
+### Patch Changes
+
+- fix: setter_computed\$: atom (non-array) stores argument
+
 ## 0.3.5
 
 ### Patch Changes
