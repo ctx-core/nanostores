@@ -1,5 +1,5 @@
 import FakeTimers, { InstalledClock } from '@sinonjs/fake-timers'
-import { is } from 'uvu/assert'
+import { equal, is } from 'uvu/assert'
 import { test } from 'uvu'
 import { run } from '@ctx-core/function'
 import { atom$, setter_computed$ } from '../index.js'
@@ -28,5 +28,17 @@ test('setter_computed$.$', ()=>{
 	clock.runAll()
 	is(a.$, 'b-4')
 	is(a.get(), 'b-4')
+})
+test('setter_computed$|single & multiple (array) dependency stores', ()=>{
+	const i0_atom$ = atom$(0)
+	const i1_atom$ = atom$(1)
+	const single_computed$ = setter_computed$(i0_atom$, (args, set)=>{
+		set(args)
+	})
+	equal(single_computed$.$, 0)
+	const multi_computed$ = setter_computed$([i0_atom$, i1_atom$], (args, set)=>{
+		set(args)
+	})
+	equal(multi_computed$.$, [0, 1])
 })
 test.run()

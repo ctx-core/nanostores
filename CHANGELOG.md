@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 0.3.7
+
+### Patch Changes
+
+- fix: setter_computed\$: single atom dependency
+
 ## 0.3.6
 
 ### Patch Changes
