@@ -2,26 +2,26 @@ import { atom, onMount } from 'nanostores'
 export const setter_computed$ = (stores, cb)=>{
 	const isArray = Array.isArray(stores)
 	let deps = collectWritable(isArray ? stores : [stores])
-	let run = (set)=>cb(isArray ? stores.map(store=>store.get()) : stores.get(), set)
-	let derived = atom()
-	const { set } = derived
-	onMount(derived, ()=>{
-		run(set)
+	let _atom = atom()
+	const { set } = _atom
+	let run = ()=>cb(isArray ? stores.map(store=>store.get()) : stores.get(), set)
+	onMount(_atom, ()=>{
+		run()
 		let unbinds = deps.map(store=>
-			store.listen(()=>{
-				run(set)
-			})
+			store.listen(()=>
+				run()
+			)
 		)
 		return ()=>{
-			for (let unbind of unbinds) unbind()
+			for (const unbind of unbinds) unbind()
 		}
 	})
 	return {
 		deps,
 		get $() {
-			return derived.get()
+			return _atom.get()
 		},
-		...derived
+		..._atom
 	}
 }
 const collectWritable = deps=>[

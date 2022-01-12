@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 0.3.8
+
+### Patch Changes
+
+- setter_computed\$: internal: refering to set using closure scope
+
 ## 0.3.7
 
 ### Patch Changes
