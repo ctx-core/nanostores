@@ -1,5 +1,15 @@
 # @ctx-core/nanostores
 
+## 0.4.0
+
+### Minor Changes
+
+- - SetterComputedAtom\$: setter_computed\$\\_T returns SetterComputedAtom\$
+
+### Patch Changes
+
+- fix: setter_computed\$: issues with calling fn handler when dependencies update
+
 ## 0.3.8
 
 ### Patch Changes

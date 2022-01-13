@@ -19,10 +19,13 @@ interface setter_computed$_T {
 	<Value extends any, OriginStores extends AnyStore[]>(
 		stores:[...OriginStores],
 		cb:(values:StoreValues<OriginStores>, set:(newValue:Value)=>void)=>void
-	):ReadableAtom$<Value>
+	):SetterComputedAtom$<Value>
 	<Value extends any, OriginStore extends Store>(
 		stores:OriginStore,
 		cb:(value:StoreValue<OriginStore>, set:(newValue:Value)=>void)=>void
-	):ReadableAtom$<Value>
+	):SetterComputedAtom$<Value>
 }
 export const setter_computed$:setter_computed$_T
+export interface SetterComputedAtom$<Value extends any> extends ReadableAtom$<Value> {
+	store_a:AnyStore[]
+}
