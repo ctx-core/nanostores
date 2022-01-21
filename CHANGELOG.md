@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 0.4.2
+
+### Patch Changes
+
+- fix: subscribe_wait_timeout: condition_fn & timeout arguments are required
+
 ## 0.4.1
 
 ### Patch Changes
@@ -10,7 +16,7 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\\$: setter_computed\\$\\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom\\\$: setter_computed\\\$\\\\_T returns SetterComputedAtom\$
 
 ### Patch Changes
 
