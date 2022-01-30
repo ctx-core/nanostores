@@ -16,11 +16,11 @@ interface setter_computed$_T {
 	 * })
 	 * ```
 	 */
-	<Value extends any, OriginStores extends AnyStore[]>(
+	<Value extends any, OriginStores extends AnyStore[] = AnyStore[]>(
 		stores:[...OriginStores],
 		cb:(values:StoreValues<OriginStores>, set:(newValue:Value)=>void)=>void
 	):SetterComputedAtom$<Value>
-	<Value extends any, OriginStore extends Store>(
+	<Value extends any, OriginStore extends Store = Store>(
 		stores:OriginStore,
 		cb:(value:StoreValue<OriginStore>, set:(newValue:Value)=>void)=>void
 	):SetterComputedAtom$<Value>

@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 0.5.0
+
+### Minor Changes
+
+- setter_computed\$\_T: feat: OriginStores generic: default type: allows one generic argument
+
 ## 0.4.2
 
 ### Patch Changes
@@ -16,7 +22,7 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\\\$: setter_computed\\\$\\\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom\\\\$: setter_computed\\\\$\\\\\_T returns SetterComputedAtom\$
 
 ### Patch Changes
 
