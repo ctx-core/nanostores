@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 0.5.1
+
+### Patch Changes
+
+- fix: ReadableAtom$: readonly $
+
 ## 0.5.0
 
 ### Minor Changes
@@ -22,7 +28,7 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\\\\$: setter_computed\\\\$\\\\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom\\\\\$: setter_computed\\\\\$\\\\\\_T returns SetterComputedAtom\$
 
 ### Patch Changes
 
