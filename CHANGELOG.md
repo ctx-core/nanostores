@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 0.5.3
+
+### Patch Changes
+
+- nanostores: ^0.5.9 -> ^0.5.10
+
 ## 0.5.2
 
 ### Patch Changes
@@ -34,7 +40,7 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\\\\\\$: setter_computed\\\\\\$\\\\\\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom\\\\\\\$: setter_computed\\\\\\\$\\\\\\\\_T returns SetterComputedAtom\$
 
 ### Patch Changes
 

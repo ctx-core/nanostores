@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/nanostores",
-	"version": "0.5.2",
+	"version": "0.5.3",
 	"description": "ctx-core nanostores",
 	"keywords": [
 		"ctx-core",
@@ -38,10 +38,10 @@
 	},
 	"dependencies": {
 		"@ctx-core/function": "workspace:^20.4.0",
-		"nanostores": "^0.5.9"
+		"nanostores": "^0.5.10"
 	},
 	"devDependencies": {
-		"@sinonjs/fake-timers": "^9.0.0",
+		"@sinonjs/fake-timers": "^9.1.0",
 		"@types/sinonjs__fake-timers": "^8.1.1",
 		"c8": "^7.11.0",
 		"check-dts": "^0.6.6",
