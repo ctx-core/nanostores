@@ -37,7 +37,7 @@
 		"test-unit-coverage": "c8 pnpm test-unit"
 	},
 	"dependencies": {
-		"@ctx-core/function": "*",
+		"@ctx-core/function": "workspace:*",
 		"nanostores": "^0.5.10"
 	},
 	"devDependencies": {
