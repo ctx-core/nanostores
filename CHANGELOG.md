@@ -1,5 +1,17 @@
 # @ctx-core/nanostores
 
+## 0.7.1
+
+### Patch Changes
+
+- eslint: ^8.8.0 -> ^8.9.0
+
+## 0.7.0
+
+### Minor Changes
+
+- decorate_neq_atom$,decorate_neql_atom$: returns onSet()
+
 ## 0.6.0
 
 ### Minor Changes
@@ -52,7 +64,7 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\\\\\\\\\$: setter_computed\\\\\\\\\$\\\\\\\\\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom\\\\\\\\\\\$: setter_computed\\\\\\\\\\\$\\\\\\\\\\\\_T returns SetterComputedAtom\$
 
 ### Patch Changes
 
