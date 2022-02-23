@@ -1,5 +1,5 @@
 import { atom } from 'nanostores'
-export const atom$ = (initialValue)=>{
+export const atom$ = initialValue=>{
 	const _atom$ = atom(initialValue)
 	Object.defineProperties(_atom$, Object.getOwnPropertyDescriptors({
 		get $() {

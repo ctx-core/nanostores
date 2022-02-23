@@ -1,4 +1,5 @@
 import { atom, onMount } from 'nanostores'
+/** @type {import('./index.d.ts').setter_computed$_T} */
 export const setter_computed$ = (stores, cb)=>{
 	const isArray = Array.isArray(stores)
 	const store_a = isArray ? stores : [stores]
@@ -16,7 +17,7 @@ export const setter_computed$ = (stores, cb)=>{
 			for (const unbind of unbinds) unbind()
 		}
 	})
-	return {
+	return /** @type {import('./index.d.ts').SetterComputedAtom$} */{
 		store_a,
 		get $() {
 			return _atom.get()

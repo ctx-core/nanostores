@@ -1,20 +1,21 @@
 import { AnyStore, Store, StoreValue } from 'nanostores/map'
 import { StoreValues } from 'nanostores/computed'
 import type { ReadableAtom$ } from '../ReadableAtom$'
+/**
+ * Create derived store, which use generates value from another stores.
+ *
+ * ```js
+ * import { computed } from 'nanostores'
+ *
+ * import { users } from './users.js'
+ *
+ * export const admins = computed$(users, list => {
+ *   return list.filter(user => user.isAdmin)
+ * })
+ * ```
+ */
 interface computed$_T {
-	/**
-	 * Create derived store, which use generates value from another stores.
-	 *
-	 * ```js
-	 * import { computed } from 'nanostores'
-	 *
-	 * import { users } from './users.js'
-	 *
-	 * export const admins = computed$(users, list => {
-	 *   return list.filter(user => user.isAdmin)
-	 * })
-	 * ```
-	 */<Value extends any, OriginStores extends AnyStore[]>(
+	<Value extends any, OriginStores extends AnyStore[]>(
 		stores:[...OriginStores],
 		cb:(...values:StoreValues<OriginStores>)=>Value
 	):ReadableAtom$<Value>
@@ -23,4 +24,4 @@ interface computed$_T {
 		cb:(value:StoreValue<OriginStore>)=>Value
 	):ReadableAtom$<Value>
 }
-export const computed$:computed$_T
+export declare const computed$:computed$_T

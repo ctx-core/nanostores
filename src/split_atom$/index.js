@@ -1,5 +1,5 @@
 import { atom } from 'nanostores'
-export const split_atom$ = (initialValue)=>{
+export const split_atom$ = initialValue=>{
 	const split_atom = atom(initialValue)
 	const { set } = split_atom
 	delete split_atom.set
