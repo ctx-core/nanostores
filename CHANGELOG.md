@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 0.7.2
+
+### Patch Changes
+
+- eslint: ^8.9.0 -> ^8.10.0
+
 ## 0.7.1
 
 ### Patch Changes
@@ -64,7 +70,7 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\\\\\\\\\\\$: setter_computed\\\\\\\\\\\$\\\\\\\\\\\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom\\\\\\\\\\\\$: setter_computed\\\\\\\\\\\\$\\\\\\\\\\\\\_T returns SetterComputedAtom\$
 
 ### Patch Changes
 
