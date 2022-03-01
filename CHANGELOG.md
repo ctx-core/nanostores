@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 0.7.3
+
+### Patch Changes
+
+- typescript: ^4.6.0-dev.20220120 -> ^4.6.2
+
 ## 0.7.2
 
 ### Patch Changes
@@ -70,7 +76,7 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\\\\\\\\\\\\$: setter_computed\\\\\\\\\\\\$\\\\\\\\\\\\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom\\\\\\\\\\\\\$: setter_computed\\\\\\\\\\\\\$\\\\\\\\\\\\\\_T returns SetterComputedAtom\$
 
 ### Patch Changes
 
