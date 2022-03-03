@@ -3,21 +3,19 @@ import { atom, onMount } from 'nanostores'
 export const setter_computed$ = (stores, cb)=>{
 	const isArray = Array.isArray(stores)
 	const store_a = isArray ? stores : [stores]
-	let _atom = atom()
-	const { set } = _atom
-	let run = ()=>cb(isArray ? stores.map(store=>store.get()) : stores.get(), set)
+	const deps = collectWritable(store_a)
+	let _atom = atom(undefined)
+	let run = ()=>cb(isArray ? store_a.map(store=>store.get()) : stores.get(), _atom.set)
 	onMount(_atom, ()=>{
 		run()
-		let unbinds = store_a.map(store=>
-			store.listen(()=>
-				run()
-			)
-		)
+		let unbinds = deps.map(store=>
+			store.listen(()=>run()))
 		return ()=>{
 			for (const unbind of unbinds) unbind()
 		}
 	})
 	return /** @type {import('./index.d.ts').SetterComputedAtom$} */{
+		// This object should be collected by collectWritable
 		store_a,
 		get $() {
 			return _atom.get()
@@ -25,3 +23,11 @@ export const setter_computed$ = (stores, cb)=>{
 		..._atom
 	}
 }
+const collectWritable = deps=>[
+	...new Set(
+		deps.reduce(
+			(acc, dep)=>(dep.deps ? [...acc, ...dep.deps] : [...acc, dep]),
+			[]
+		)
+	)
+]
