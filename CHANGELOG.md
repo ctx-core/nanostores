@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 0.7.4
+
+### Patch Changes
+
+- setter_computed$: fix: listen to changes not from computed$ (deps prop): + collectWritable
+
 ## 0.7.3
 
 ### Patch Changes
@@ -76,7 +82,7 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\\\\\\\\\\\\\$: setter_computed\\\\\\\\\\\\\$\\\\\\\\\\\\\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom\\\\\\\\\\\\\\$: setter_computed\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\_T returns SetterComputedAtom\$
 
 ### Patch Changes
 
