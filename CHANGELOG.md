@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 1.0.0
+
+### Major Changes
+
+- BREAKING CHANGE: setter_computed\$: stale set calls are ignored
+
 ## 0.7.5
 
 ### Patch Changes
@@ -88,7 +94,7 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\\\\\\\\\\\\\\\$: setter_computed\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom\\\\\\\\\\\\\\\\$: setter_computed\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\_T returns SetterComputedAtom\$
 
 ### Patch Changes
 
