@@ -1,33 +1,28 @@
-import { atom, onMount } from 'nanostores'
+import { atom, computed } from 'nanostores'
+import { computed$ } from '../computed$/index.js'
 /** @type {import('./index.d.ts').setter_computed$_T} */
 export const setter_computed$ = (stores, cb)=>{
 	const isArray = Array.isArray(stores)
 	const store_a = isArray ? stores : [stores]
-	const deps = collectWritable(store_a)
-	let _atom = atom(undefined)
-	let run = ()=>cb(isArray ? store_a.map(store=>store.get()) : stores.get(), _atom.set)
-	onMount(_atom, ()=>{
-		run()
-		let unbinds = deps.map(store=>
-			store.listen(()=>run()))
-		return ()=>{
-			for (const unbind of unbinds) unbind()
-		}
+	const store_val_a$ = computed(store_a, (...store_val_a)=>store_val_a)
+	const return_payload$ = atom({ store_val_a: [], val: undefined })
+	let run = store_val_a=>{
+		cb(isArray ? store_val_a : stores.get(), val=>{
+			const _store_val_a = store_val_a_()
+			if (store_val_a.every((store_val, $i)=>store_val === _store_val_a[$i])) {
+				return_payload$.set({ store_val_a, val })
+			}
+		})
+	}
+	store_val_a$.subscribe(store_val_a=>{
+		run(store_val_a)
 	})
-	return /** @type {import('./index.d.ts').SetterComputedAtom$} */{
-		// This object should be collected by collectWritable
-		store_a,
-		get $() {
-			return _atom.get()
-		},
-		..._atom
+	const _setter_computed$ = computed$([return_payload$, store_val_a$], return_payload=>{
+		return return_payload.val
+	})
+	_setter_computed$.store_a = store_a
+	return /** @type {import('./index.d.ts').SetterComputedAtom$} */_setter_computed$
+	function store_val_a_() {
+		return store_a.map(store=>store.get())
 	}
 }
-const collectWritable = deps=>[
-	...new Set(
-		deps.reduce(
-			(acc, dep)=>(dep.deps ? [...acc, ...dep.deps] : [...acc, dep]),
-			[]
-		)
-	)
-]
