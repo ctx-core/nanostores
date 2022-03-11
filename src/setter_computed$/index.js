@@ -8,14 +8,21 @@ export const setter_computed$ = (stores, cb)=>{
 	const return_payload$ = atom({ store_val_a: [], val: undefined })
 	let run = store_val_a=>{
 		cb(isArray ? store_val_a : stores.get(), val=>{
-			return_payload$.set({ store_val_a, val })
+			const _store_val_a = store_val_a_()
+			if (store_val_a.every((store_val, $i)=>store_val === _store_val_a[$i])) {
+				return_payload$.set({ store_val_a, val })
+			}
 		})
 	}
 	store_val_a$.subscribe(store_val_a=>{
 		run(store_val_a)
 	})
-	const _setter_computed$ = computed$([return_payload$, store_val_a$],
-		return_payload=>return_payload.val)
+	const _setter_computed$ = computed$([return_payload$, store_val_a$], return_payload=>{
+		return return_payload.val
+	})
 	_setter_computed$.store_a = store_a
 	return /** @type {import('./index.d.ts').SetterComputedAtom$} */_setter_computed$
+	function store_val_a_() {
+		return store_a.map(store=>store.get())
+	}
 }
