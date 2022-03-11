@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 1.0.2
+
+### Patch Changes
+
+- fix: https://github.com/nanostores/nanostores/issues/101 via https://github.com/nanostores/nanostores/pull/102
+
 ## 1.0.1
 
 ### Patch Changes
@@ -100,7 +106,7 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\\\\\\\\\\\\\\\\\$: setter_computed\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom\\\\\\\\\\\\\\\\\\$: setter_computed\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\_T returns SetterComputedAtom\$
 
 ### Patch Changes
 
