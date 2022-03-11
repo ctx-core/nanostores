@@ -10,13 +10,13 @@
 
 ### Patch Changes
 
-- setter_computed\$: reverted stale set calls are ignored
+- setter_computed$: reverted stale set calls are ignored
 
 ## 1.0.0
 
 ### Major Changes
 
-- BREAKING CHANGE: setter_computed\$: stale set calls are ignored
+- BREAKING CHANGE: setter_computed$: stale set calls are ignored
 
 ## 0.7.5
 
@@ -88,7 +88,7 @@
 
 ### Minor Changes
 
-- setter_computed\$\_T: feat: OriginStores generic: default type: allows one generic argument
+- setter_computed$_T: feat: OriginStores generic: default type: allows one generic argument
 
 ## 0.4.2
 
@@ -106,29 +106,29 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\\\\\\\\\\\\\\\\\\$: setter_computed\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom$: setter_computed$_T returns SetterComputedAtom$
 
 ### Patch Changes
 
-- fix: setter_computed\$: issues with calling fn handler when dependencies update
+- fix: setter_computed$: issues with calling fn handler when dependencies update
 
 ## 0.3.8
 
 ### Patch Changes
 
-- setter_computed\$: internal: refering to set using closure scope
+- setter_computed$: internal: refering to set using closure scope
 
 ## 0.3.7
 
 ### Patch Changes
 
-- fix: setter_computed\$: single atom dependency
+- fix: setter_computed$: single atom dependency
 
 ## 0.3.6
 
 ### Patch Changes
 
-- fix: setter_computed\$: atom (non-array) stores argument
+- fix: setter_computed$: atom (non-array) stores argument
 
 ## 0.3.5
 
@@ -176,7 +176,7 @@
 
 ### Patch Changes
 
-- fix: interface ReadableAtom\$<Value> extends ReadableAtom<Value
+- fix: interface ReadableAtom$<Value> extends ReadableAtom<Value
 
   fix: interface WritableAtom$<Value> extends ReadableAtom$<Value>,WritableAtom<Value>
 
