@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 1.0.5
+
+### Patch Changes
+
+- setter_computed\$: memoizing \_store_val_a instead of calling store_a.map(store=>store.get())
+
 ## 1.0.4
 
 ### Patch Changes
@@ -118,7 +124,7 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\$: setter_computed\$\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom\\$: setter_computed\\$\\\_T returns SetterComputedAtom\$
 
 ### Patch Changes
 
