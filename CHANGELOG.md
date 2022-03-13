@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 1.0.6
+
+### Patch Changes
+
+- setter_computed$: return_payload$ atom takes a val instead of { store_val_a, val }
+
 ## 1.0.5
 
 ### Patch Changes
@@ -124,7 +130,7 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\\$: setter_computed\\$\\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom\\\$: setter_computed\\\$\\\\_T returns SetterComputedAtom\$
 
 ### Patch Changes
 
