@@ -8,7 +8,7 @@ export const setter_computed$ = (stores, cb)=>{
 	const return_payload$ = atom()
 	let _store_val_a = []
 	let run = store_val_a=>{
-		cb(isArray ? store_val_a : stores.get(), val=>{
+		cb(isArray ? store_val_a : store_val_a[0], val=>{
 			if (store_val_a.every((store_val, $i)=>store_val === _store_val_a[$i])) {
 				return_payload$.set(val)
 			} else {
