@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 1.0.7
+
+### Patch Changes
+
+- setter_computed\$: optimization: store_val_a[0] instead of store.get()
+
 ## 1.0.6
 
 ### Patch Changes
@@ -130,7 +136,7 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\\\$: setter_computed\\\$\\\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom\\\\$: setter_computed\\\\$\\\\\_T returns SetterComputedAtom\$
 
 ### Patch Changes
 
