@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 1.0.8
+
+### Patch Changes
+
+- setter_computed\$: fix: not calling set should not notify observers
+
 ## 1.0.7
 
 ### Patch Changes
@@ -136,7 +142,7 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\\\\$: setter_computed\\\\$\\\\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom\\\\\$: setter_computed\\\\\$\\\\\\_T returns SetterComputedAtom\$
 
 ### Patch Changes
 
