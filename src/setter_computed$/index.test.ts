@@ -2,7 +2,7 @@ import FakeTimers, { InstalledClock } from '@sinonjs/fake-timers'
 import { equal, is } from 'uvu/assert'
 import { test } from 'uvu'
 import { run } from '@ctx-core/function'
-import { atom$, setter_computed$ } from '../index.js'
+import { atom$, computed$, setter_computed$ } from '../index.js'
 let clock:InstalledClock
 test.before(()=>{
 	clock = FakeTimers.install()
@@ -40,5 +40,53 @@ test('setter_computed$|single & multiple (array) dependency stores', ()=>{
 		set(args)
 	})
 	equal(multi_computed$.$, [0, 1])
+})
+test('setter_computed$|child atoms|cb does not set', ()=>{
+	const $atom$ = atom$(0)
+	const $setter_computed$ = setter_computed$($atom$, (atom, set)=>{
+		return
+	})
+	const $child$ = computed$($setter_computed$, $=>$)
+	const $child$_listen_a = []
+	$child$.listen($=>$child$_listen_a.push($))
+	$atom$.$ = 1
+	equal($child$.$, undefined)
+	equal($child$_listen_a, [])
+})
+test('setter_computed$|cb returns sets same value', ()=>{
+	const $atom$ = atom$()
+	const $setter_computed$ = setter_computed$($atom$, (atom, set)=>{
+		set(atom)
+	})
+	const $child$ = computed$($setter_computed$, $=>$)
+	const $child$_listen_a = []
+	$child$.listen($=>$child$_listen_a.push($))
+	const atom = {}
+	$atom$.$ = atom
+	equal($child$.$, atom)
+	equal($child$_listen_a, [atom])
+	$atom$.$ = atom
+	equal($child$.$, atom)
+	equal($child$_listen_a, [atom, atom])
+})
+test('setter_computed$|cb returns set then no set', ()=>{
+	const $atom$ = atom$()
+	let i = 0
+	const $setter_computed$ = setter_computed$($atom$, (atom, set)=>{
+		if (i < 2) {
+			set(atom)
+			i++
+		}
+	})
+	const $child$ = computed$($setter_computed$, $=>$)
+	const $child$_listen_a = []
+	$child$.listen($=>$child$_listen_a.push($))
+	const atom = {}
+	$atom$.$ = atom
+	equal($child$.$, atom)
+	equal($child$_listen_a, [atom])
+	$atom$.$ = atom
+	equal($child$.$, atom)
+	equal($child$_listen_a, [atom])
 })
 test.run()
