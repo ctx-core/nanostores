@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 1.0.10
+
+### Patch Changes
+
+- neq_atom$,neql_atom$: fix: circular dependency
+
 ## 1.0.9
 
 ### Patch Changes
@@ -148,7 +154,7 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\\\\\\$: setter_computed\\\\\\$\\\\\\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom\\\\\\\$: setter_computed\\\\\\\$\\\\\\\\_T returns SetterComputedAtom\$
 
 ### Patch Changes
 

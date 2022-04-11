@@ -1,5 +1,5 @@
+import { onSet } from 'nanostores'
 import { atom$ } from '../atom$/index.js'
-import { onSet } from '../index.js'
 /** @type {import('./index.d.ts').neql_atom$} */
 export const neql_atom$ = (initialValue)=>{
 	const $atom$ = atom$(initialValue)
