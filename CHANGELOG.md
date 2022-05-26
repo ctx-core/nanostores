@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 1.1.0
+
+### Minor Changes
+
+- feat: + listen$change,listen$prev
+
 ## 1.0.19
 
 ### Patch Changes
@@ -212,7 +218,7 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\\\\\\\\\\\\\\\\$: setter_computed\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom\\\\\\\\\\\\\\\\\$: setter_computed\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\_T returns SetterComputedAtom\$
 
 ### Patch Changes
 
