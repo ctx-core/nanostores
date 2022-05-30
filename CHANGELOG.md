@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 1.4.0
+
+### Minor Changes
+
+- feat: + _atom_ aliases atom,_computed_ aliases computed,readable*fn*,writable*fn*
+
 ## 1.3.0
 
 ### Minor Changes
@@ -248,7 +254,7 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\\\\\\\\\\\\\\\\\\\\$: setter_computed\\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom\\\\\\\\\\\\\\\\\\\\\$: setter_computed\\\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\\\_T returns SetterComputedAtom\$
 
 ### Patch Changes
 

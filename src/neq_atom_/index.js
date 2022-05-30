@@ -1,5 +1,5 @@
-import { atom as _atom_, onSet } from 'nanostores'
-import { writable_fn_ } from '../_private/index.js'
+import { _atom_, onSet } from '../_nanostores/index.js'
+import { writable_fn_ } from '../writable_fn_/index.js'
 /** @type {import('./index.d.ts').neq_atom_} */
 export const neq_atom_ = (initialValue)=>{
 	const _atom = _atom_(initialValue)
