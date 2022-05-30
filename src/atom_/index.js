@@ -1,20 +1,6 @@
-import { atom } from 'nanostores'
+import { atom as _atom_ } from 'nanostores'
+import { writable_fn_ } from '../_private/index.js'
 export const atom_ = initialValue=>{
-	const _atom = atom(initialValue)
-	Object.defineProperties(_atom, Object.getOwnPropertyDescriptors({
-		get _() {
-			return _atom.get()
-		},
-		set _(val) {
-			_atom.set(val)
-		},
-		get $() {
-			return _atom.get()
-		},
-		set $(val) {
-			_atom.set(val)
-		},
-	}))
-	return _atom
+	return writable_fn_(_atom_(initialValue))
 }
 export { atom_ as atom$ }

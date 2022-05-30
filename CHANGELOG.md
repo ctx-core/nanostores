@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 1.3.0
+
+### Minor Changes
+
+- atom*,computed*,setter*computed*: getter/setter function api: similar to jQuery
+
 ## 1.2.0
 
 ### Minor Changes
@@ -242,7 +248,7 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\\\\\\\\\\\\\\\\\\\$: setter_computed\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom\\\\\\\\\\\\\\\\\\\\$: setter_computed\\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\\_T returns SetterComputedAtom\$
 
 ### Patch Changes
 
