@@ -1,16 +1,16 @@
 import { test } from 'uvu'
 import { equal } from 'uvu/assert'
-import { atom$, listen_once } from '../index.js'
+import { atom_, listen_once } from '../index.js'
 test('listen_once', ()=>{
-	let a$ = atom$('a')
+	let a_ = atom_('a')
 	const listen_val_a:string[][] = []
-	listen_once(a$, (...arg_a)=>{
+	listen_once(a_, (...arg_a)=>{
 		listen_val_a.push(arg_a as string[])
 	})
 	equal(listen_val_a, [])
-	a$.$ = 'b'
+	a_._ = 'b'
 	equal(listen_val_a, [['b']])
-	a$.$ = 'c'
+	a_._ = 'c'
 	equal(listen_val_a, [['b']])
 })
 test.run()

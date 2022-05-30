@@ -1,5 +1,23 @@
 # @ctx-core/nanostores
 
+## 1.2.0
+
+### Minor Changes
+
+- feat: underscore (\_) suffix: aliased by \$ suffix
+
+      atom_ as atom$
+      computed_ as computed$
+      listen_change as listen$change
+      listen_once as listen$once
+      listen_prev as listen$prev
+      neq_atom_ as neq_atom$
+      neql_atom_ as neql_atom$
+      ReadableAtom_ as ReadableAtom_
+      setter_computed_ as setter_computed$
+      split_atom_ as split_atom$
+      WritableAtom_ as WritableAtom$
+
 ## 1.1.1
 
 ### Patch Changes
@@ -224,7 +242,7 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\\\\\\\\\\\\\\\\\\$: setter_computed\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom\\\\\\\\\\\\\\\\\\\$: setter_computed\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\_T returns SetterComputedAtom\$
 
 ### Patch Changes
 
