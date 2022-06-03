@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 1.4.1
+
+### Patch Changes
+
+- .js + .d.ts instead of .ts
+
 ## 1.4.0
 
 ### Minor Changes
@@ -254,7 +260,7 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\\\\\\\\\\\\\\\\\\\\\$: setter_computed\\\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom\\\\\\\\\\\\\\\\\\\\\\$: setter_computed\\\\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\\\\_T returns SetterComputedAtom\$
 
 ### Patch Changes
 
