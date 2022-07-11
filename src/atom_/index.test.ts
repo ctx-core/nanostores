@@ -1,6 +1,6 @@
-import { is } from 'uvu/assert'
 import { test } from 'uvu'
-import { atom_ } from '../index.js'
+import { equal, is } from 'uvu/assert'
+import { atom_, type WritableAtom_ } from '../index.js'
 test('atom_()()', ()=>{
 	const atom = atom_(1)
 	is(atom(), 1)
@@ -28,4 +28,12 @@ test('atom_()()', ()=>{
 	is(atom.$, 5)
 	is(atom.get(), 5)
 })
+test('atom_|assign', ()=>{
+	const letter_ = atom_('a') as Foobar
+	letter_.foobar = 'baz'
+	equal(letter_.foobar, 'baz')
+})
 test.run()
+interface Foobar extends WritableAtom_<string> {
+	foobar: string
+}

@@ -1,9 +1,9 @@
 import { test } from 'uvu'
-import { is } from 'uvu/assert'
-import { atom_, computed_ } from '../index.js'
+import { equal, is } from 'uvu/assert'
+import { atom_, computed_, ReadableAtom_ } from '../index.js'
 test('computed_()()', ()=>{
-	let letter_ = atom_('a')
-	let number_ = atom_(0)
+	const letter_ = atom_('a')
+	const number_ = atom_(0)
 	const str_ = computed_([letter_, number_], (letter, number)=>{
 		return `${letter}-${String(number * 2)}`
 	})
@@ -22,4 +22,12 @@ test('computed_()()', ()=>{
 	is(str_.$, 'b-4')
 	is(str_.get(), 'b-4')
 })
+test('computed_|assign', ()=>{
+	const letter_ = computed_(atom_('a'), $=>$) as Foobar
+	letter_.foobar = 'baz'
+	equal(letter_.foobar, 'baz')
+})
 test.run()
+interface Foobar extends ReadableAtom_<string> {
+	foobar:string
+}

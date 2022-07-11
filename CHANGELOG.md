@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 1.4.2
+
+### Patch Changes
+
+- readable*fn*,computed*,cache*,split*atom*: fix: assign props onto the object
+
 ## 1.4.1
 
 ### Patch Changes
@@ -260,7 +266,7 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\\\\\\\\\\\\\\\\\\\\\\$: setter_computed\\\\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\\\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom\\\\\\\\\\\\\\\\\\\\\\\$: setter_computed\\\\\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\\\\\_T returns SetterComputedAtom\$
 
 ### Patch Changes
 
