@@ -5,5 +5,4 @@ export declare function neql_atom_<Value, StoreExt = {}>(
 export declare function decorate_neql_atom_<Value, StoreExt = {}>(
 	$atom$:atom_T<Value, StoreExt>
 ):atom_T<Value, StoreExt>
-export type neql_atom$<Value, StoreExt = {}> = typeof neql_atom_<Value, StoreExt>
-export type decorate_neql_atom$<Value, StoreExt = {}> = typeof decorate_neql_atom_<Value, StoreExt>
+export { neql_atom_ as neql_atom$, decorate_neql_atom_ as decorate_neql_atom$ }

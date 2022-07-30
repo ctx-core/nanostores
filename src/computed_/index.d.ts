@@ -1,5 +1,5 @@
-import { AnyStore, Store, StoreValue } from 'nanostores/map'
-import { StoreValues } from 'nanostores/computed'
+import type { StoreValues } from 'nanostores/computed'
+import type { AnyStore, Store, StoreValue } from 'nanostores/map'
 import type { ReadableAtom_ } from '../ReadableAtom_'
 /**
  * Create derived store, which use generates value from another stores.
@@ -14,7 +14,7 @@ import type { ReadableAtom_ } from '../ReadableAtom_'
  * })
  * ```
  */
-interface computed__T {
+export interface computed__T {
 	<Value extends any, OriginStores extends AnyStore[]>(
 		stores:[...OriginStores],
 		cb:(...values:StoreValues<OriginStores>)=>Value
@@ -25,4 +25,4 @@ interface computed__T {
 	):ReadableAtom_<Value>
 }
 export declare const computed_:computed__T
-export declare const computed$:computed__T
+export { computed_ as computed$ }

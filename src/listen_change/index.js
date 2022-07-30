@@ -7,6 +7,4 @@ export function listen_change(store, fn, eq_fn = eq) {
 		}
 	})
 }
-export {
-	listen_change as listen$change
-}
+export { listen_change as listen$change }

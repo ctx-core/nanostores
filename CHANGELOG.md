@@ -1,5 +1,12 @@
 # @ctx-core/nanostores
 
+## 1.4.8
+
+### Patch Changes
+
+- type fixes
+- export as instead of export type =
+
 ## 1.4.7
 
 ### Patch Changes
@@ -296,7 +303,7 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\\\\\\\\\\\\\\\\\\\\\\\\\\\\$: setter_computed\\\\\\\\\\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom\$: setter_computed$\_T returns SetterComputedAtom\$
 
 ### Patch Changes
 

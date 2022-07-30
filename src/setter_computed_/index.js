@@ -4,7 +4,8 @@ import { computed_ } from '../computed_/index.js'
 export const setter_computed_ = (stores, cb)=>{
 	const isArray = Array.isArray(stores)
 	const store_a = isArray ? stores : [stores]
-	const store_val_a_ = computed_(store_a, (...store_val_a)=>store_val_a)
+	const store_val_a_ = computed_(store_a, (...store_val_a)=>
+		/** @type {import('nanostores/map').AnyStore[]} */store_val_a)
 	const return_payload_atom = atom()
 	let _store_val_a = []
 	let run = store_val_a=>{
@@ -16,12 +17,10 @@ export const setter_computed_ = (stores, cb)=>{
 			}
 		})
 	}
-	store_val_a_.subscribe(store_val_a=>{
-		_store_val_a = store_val_a
-		run(store_val_a)
+	store_val_a_.subscribe($=>{
+		_store_val_a = $
+		run($)
 	})
 	return /** @type {import('./index.d.ts').SetterComputedAtom_} */computed_(return_payload_atom, val=>val)
 }
-export {
-	setter_computed_ as setter_computed$
-}
+export { setter_computed_ as setter_computed$ }

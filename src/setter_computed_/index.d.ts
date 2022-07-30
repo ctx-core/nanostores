@@ -1,7 +1,7 @@
-import { Store } from 'nanostores'
-import { AnyStore, StoreValue } from 'nanostores/map'
-import { StoreValues } from 'nanostores/computed'
-import { ReadableAtom_ } from '../ReadableAtom_'
+import type { Store } from 'nanostores'
+import type { StoreValues } from 'nanostores/computed'
+import type { AnyStore, StoreValue } from 'nanostores/map'
+import type { ReadableAtom_ } from '../ReadableAtom_'
 /**
  * Create derived store, which use generates value from another stores.
  *
@@ -26,8 +26,7 @@ interface setter_computed__T {
 	):SetterComputedAtom_<Value>
 }
 export declare const setter_computed_:setter_computed__T
-export declare const setter_computed$:setter_computed__T
 export interface SetterComputedAtom_<Value extends any> extends ReadableAtom_<Value> {
 	store_a:AnyStore[]
 }
-export type SetterComputedAtom$<Value extends any> = SetterComputedAtom_<Value>
+export { setter_computed_ as setter_computed$, SetterComputedAtom_ as SetterComputedAtom$ }

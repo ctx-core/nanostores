@@ -4,4 +4,4 @@ export interface ReadableAtom_<Value> extends ReadableAtom<Value> {
 	readonly _:Value
 	readonly $:Value
 }
-export type ReadableAtom$<Value> = ReadableAtom_<Value>
+export { ReadableAtom_ as ReadableAtom$ }

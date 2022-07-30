@@ -1,5 +1,4 @@
 import { atom } from 'nanostores'
-import { computed__T } from '../computed_'
+import type { computed__T } from '../computed_'
 export * from 'nanostores'
-export declare type _atom_<Value, StoreExt = {}> = typeof atom<Value, StoreExt>
-export declare type _computed_<Value, OriginStore> = computed__T
+export { atom as _atom_, computed__T as _computed_ }
