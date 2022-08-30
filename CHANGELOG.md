@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 2.0.0
+
+### Major Changes
+
+- subscribe_wait: condition argument is required
+
 ## 1.5.0
 
 ### Minor Changes
