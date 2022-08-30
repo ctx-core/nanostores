@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 1.5.0
+
+### Minor Changes
+
+- subscribe_wait: optional timeout argument
+
 ## 1.4.11
 
 ### Patch Changes
@@ -324,7 +330,7 @@
 
 ### Minor Changes
 
-- - SetterComputedAtom\\\\$: setter_computed\\\$\\\\_T returns SetterComputedAtom\$
+- - SetterComputedAtom\\\\$: setter_computed\\\$\\\\\_T returns SetterComputedAtom\$
 
 ### Patch Changes
 
