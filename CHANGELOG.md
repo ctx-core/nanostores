@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 2.0.1
+
+### Patch Changes
+
+- @ctx-core/function: ^21.0.1 -> ^21.1.0
+
 ## 2.0.0
 
 ### Major Changes
