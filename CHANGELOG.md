@@ -1,5 +1,18 @@
 # @ctx-core/nanostores
 
+## 2.2.0
+
+### Minor Changes
+
+- feat:
+
+  computed**set*a*
+  computed**set*o*
+  computed*set_a*
+  computed*set_o*
+
+  fix: refresh_writable_atom_T
+
 ## 2.1.0
 
 ### Minor Changes

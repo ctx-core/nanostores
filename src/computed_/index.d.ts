@@ -1,8 +1,11 @@
+import type { ReadableAtom } from 'nanostores'
 import type { StoreValues } from 'nanostores/computed'
 import type { AnyStore, Store, StoreValue } from 'nanostores/map'
 import type { ReadableAtom_ } from '../_types'
+export declare const computed_:computed__T
+export declare function mix_computed_<Value>(atom:ReadableAtom):ReadableAtom_<Value>
 /**
- * Create derived store, which use generates value from another stores.
+ * Creates a computed atom, which use generates value from another stores.
  *
  * ```js
  * import { computed } from 'nanostores'
@@ -24,5 +27,4 @@ export interface computed__T {
 		cb:(value:StoreValue<OriginStore>)=>Value
 	):ReadableAtom_<Value>
 }
-export declare const computed_:computed__T
 export { computed_ as computed$ }
