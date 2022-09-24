@@ -1,5 +1,21 @@
 # @ctx-core/nanostores
 
+## 2.1.0
+
+### Minor Changes
+
+- feat:
+
+  mix*refresh
+  refresh_atom*
+  writable_atom**\_mix
+  ready**T
+  refresh_atom_T
+  refresh_mixin_T
+  refresh_readable_atom_T
+  refresh_T
+  refresh_writable_atom_T
+
 ## 2.0.2
 
 ### Patch Changes

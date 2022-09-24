@@ -1,6 +1,6 @@
 import type { StoreValues } from 'nanostores/computed'
 import type { AnyStore, Store, StoreValue } from 'nanostores/map'
-import type { ReadableAtom_ } from '../ReadableAtom_'
+import type { ReadableAtom_ } from '../_types'
 /**
  * Create derived store, which use generates value from another stores.
  *

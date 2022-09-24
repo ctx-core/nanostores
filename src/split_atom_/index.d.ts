@@ -1,4 +1,4 @@
-import type { ReadableAtom_ } from '../ReadableAtom_'
+import type { ReadableAtom_ } from '../_types'
 export function split_atom_<Value, StoreExt = {}>(
 	initialValue?:Value
 ):split_atom__ret_T<Value, StoreExt>

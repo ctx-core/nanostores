@@ -1,4 +1,4 @@
-import type { WritableAtom_ } from '../WritableAtom_'
+import type { WritableAtom_ } from '../_types'
 export declare function atom_<Value, StoreExt = {}>(
 	initialValue?:Value
 ):atom_T<Value, StoreExt>
