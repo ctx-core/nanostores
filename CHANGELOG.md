@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 2.2.1
+
+### Patch Changes
+
+- mix_refresh: fix: set argument type
+
 ## 2.2.0
 
 ### Minor Changes
