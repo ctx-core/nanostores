@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 2.2.3
+
+### Patch Changes
+
+- WritableAtom\_: explicitly extends ReadableAtom
+
 ## 2.2.2
 
 ### Patch Changes
