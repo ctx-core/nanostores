@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 2.2.9
+
+### Patch Changes
+
+- @ctx-core/object: ^22.9.0 -> ^22.9.1
+
 ## 2.2.8
 
 ### Patch Changes
