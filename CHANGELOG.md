@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 2.2.23
+
+### Patch Changes
+
+- nanostores: ^0.7.3 -> ^0.7.4
+
 ## 2.2.22
 
 ### Patch Changes
