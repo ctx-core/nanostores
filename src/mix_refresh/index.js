@@ -21,7 +21,7 @@ export function mix_refresh(readable_atom, set) {
 				throw err
 			}
 		} else {
-			throw 'refresh only works on a WritableAtom or a ReadableAtom with a set function argument'
+			throw new Error('refresh only works on a WritableAtom or a ReadableAtom with a set function argument')
 		}
 	}
 }

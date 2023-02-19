@@ -1,5 +1,13 @@
 # @ctx-core/nanostores
 
+## 2.2.26
+
+### Patch Changes
+
+- fix: `throw new Error(error_message)` instead of `throw error_message`
+- Updated dependencies
+  - @ctx-core/function@21.7.2
+
 ## 2.2.25
 
 ### Patch Changes

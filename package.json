@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/nanostores",
-	"version": "2.2.25",
+	"version": "2.2.26",
 	"description": "ctx-core nanostores",
 	"keywords": [
 		"ctx-core",
@@ -35,7 +35,7 @@
 		"test-unit-coverage": "c8 pnpm test-unit"
 	},
 	"dependencies": {
-		"@ctx-core/function": "^21.7.1",
+		"@ctx-core/function": "^21.7.2",
 		"@ctx-core/number": "^8.6.1",
 		"@ctx-core/object": "^24.1.6",
 		"nanostores": "^0.7.4"
