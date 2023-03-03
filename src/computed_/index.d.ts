@@ -1,5 +1,5 @@
-import type { AnyStore, ReadableAtom, Store, StoreValue, StoreValues } from 'nanostores'
-import type { ReadableAtom_ } from '../_types'
+import type { AnyStore, ReadableAtom, Store, StoreValue } from 'nanostores'
+import type { ReadableAtom_, StoreValues } from '../_types'
 export declare const computed_:computed__T
 export declare function mix_computed_<
 	Value

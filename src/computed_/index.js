@@ -4,8 +4,8 @@ import { readable_fn_ } from '../readable_fn_/index.js'
 /** @typedef {import('nanostores').ReadableAtom}ReadableAtom */
 /** @typedef {import('nanostores').Store}Store */
 /** @typedef {import('nanostores').StoreValue}StoreValue */
-/** @typedef {import('nanostores').StoreValues}StoreValues */
 /** @typedef {import('../_types').ReadableAtom_}ReadableAtom_ */
+/** @typedef {import('../_types').StoreValues}StoreValues */
 /**
  * @param {AnyStore[]|Store|any}stores
  * @param {((...values:StoreValues<unknown>)=>unknown)|((value:StoreValue<unknown>)=>unknown)}cb

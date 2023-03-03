@@ -5,7 +5,7 @@ export const setter_computed_ = (stores, cb)=>{
 	const isArray = Array.isArray(stores)
 	const store_a = isArray ? stores : [stores]
 	const store_val_a_ = computed_(store_a, (...store_val_a)=>
-		/** @type {import('nanostores/map').AnyStore[]} */store_val_a)
+		/** @type {import('nanostores').AnyStore[]} */store_val_a)
 	const return_payload_atom = atom()
 	let _store_val_a = []
 	let run = store_val_a=>
