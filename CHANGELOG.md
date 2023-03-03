@@ -1,5 +1,18 @@
 # @ctx-core/nanostores
 
+## 3.0.0
+
+### Major Changes
+
+- readable*fn*: arguments: - rest
+- atom_T: generics: - StoreExt
+
+### Patch Changes
+
+- - jsdocs
+- Updated dependencies
+  - @ctx-core/object@27.0.0
+
 ## 2.2.34
 
 ### Patch Changes

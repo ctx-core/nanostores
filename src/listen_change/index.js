@@ -1,5 +1,11 @@
 import { eq } from '@ctx-core/function'
 import { listen_prev } from '../listen_prev/index.js'
+/**
+ * @param {import('nanostores').ReadableAtom<unknown>>}store
+ * @param {(val:unknown, prev_val:unknown)=>void}fn
+ * @param {typeof import('@ctx-core/function').eq}[eq_fn]
+ * @returns {()=>void}
+ */
 export function listen_change(store, fn, eq_fn = eq) {
 	return listen_prev(store, (val, prev_val)=>{
 		if (!eq_fn([val, prev_val])) {

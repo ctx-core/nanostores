@@ -1,6 +1,18 @@
 import { isNumber_ } from '@ctx-core/number'
 import { promise_timeout } from '@ctx-core/function'
-export function subscribe_wait(store, condition_fn, timeout) {
+/** @typedef {import('nanostores').ReadableAtom}ReadableAtom */
+/** @typedef {import('../_types').ExtractReadableAtomValue}ExtractReadableAtomValue */
+/**
+ * @param {ReadableAtom<unknown>}store
+ * @param {(val:ExtractReadableAtomValue<ReadableAtom<unknown>>)=>any}condition_fn
+ * @param {number}[timeout]
+ * @returns {Promise<ExtractReadableAtomValue<ReadableAtom<unknown>>>}
+ */
+export function subscribe_wait(
+	store,
+	condition_fn,
+	timeout
+) {
 	const _subscribe_wait = new Promise(resolve => {
 		let unsubscribe, unsubscribe_oninit = false
 		unsubscribe = store.subscribe($ => {

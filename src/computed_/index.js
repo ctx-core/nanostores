@@ -1,10 +1,15 @@
 import { computed as _computed_ } from 'nanostores'
 import { readable_fn_ } from '../readable_fn_/index.js'
+/** @typedef {import('nanostores').AnyStore}AnyStore */
+/** @typedef {import('nanostores').ReadableAtom}ReadableAtom */
+/** @typedef {import('nanostores').Store}Store */
+/** @typedef {import('nanostores').StoreValue}StoreValue */
+/** @typedef {import('nanostores').StoreValues}StoreValues */
+/** @typedef {import('../_types').ReadableAtom_}ReadableAtom_ */
 /**
- *
- * @param stores {AnyStore[]|Store}
- * @param cb {((...values:StoreValues<OriginStores>)=>Value)|((value:StoreValue<OriginStore>)=>Value)}
- * @returns {function(): *}
+ * @param {AnyStore[]|Store|any}stores
+ * @param {((...values:StoreValues<unknown>)=>unknown)|((value:StoreValue<unknown>)=>unknown)}cb
+ * @returns {ReadableAtom_<unknown>}
  * @private
  */
 export function computed_(
@@ -13,6 +18,11 @@ export function computed_(
 ) {
 	return mix_computed_(_computed_(stores, cb))
 }
+/**
+ * @param {ReadableAtom<unknown>}computed
+ * @returns {ReadableAtom_<unknown>}
+ * @private
+ */
 export function mix_computed_(computed) {
 	return readable_fn_(computed)
 }

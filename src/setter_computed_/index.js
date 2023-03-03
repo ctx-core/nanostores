@@ -20,6 +20,8 @@ export const setter_computed_ = (stores, cb)=>{
 		_store_val_a = $
 		run($)
 	})
-	return /** @type {import('./index.d.ts').SetterComputedAtom_} */computed_(return_payload_atom, val=>val)
+	return (
+		/** @type {import('./index.d.ts').SetterComputedAtom_} */
+		computed_(return_payload_atom, val=>val))
 }
 export { setter_computed_ as setter_computed$ }

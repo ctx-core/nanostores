@@ -1,5 +1,13 @@
 import { assign } from '@ctx-core/object'
-export function mix_refresh(readable_atom, set) {
+/**
+ * @param {import('nanostores').ReadableAtom<unknown>}readable_atom
+ * @param {($:unknown)=>void}[set]
+ * @returns {import('../_types').refresh_mixin_T<unknown>}
+ */
+export function mix_refresh(
+	readable_atom,
+	set
+) {
 	return assign(readable_atom, { refresh })
 	function refresh(in_val = readable_atom.get()) {
 		if (set) {

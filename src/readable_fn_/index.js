@@ -1,17 +1,27 @@
-export function readable_fn_(atom, rest = {}) {
-	function fn() {
-		return atom.get()
-	}
-	return new Proxy(fn, {
+/** @typedef {import('nanostores').ReadableAtom}ReadableAtom */
+/** @typedef {import('../_types').ReadableAtom_}ReadableAtom_ */
+/**
+ * @param {ReadableAtom<unknown>}computed
+ * @returns {ReadableAtom_<unknown>}
+ * @private
+ */
+export function readable_fn_(computed) {
+	/** @type {ReadableAtom_<unknown>} */
+	return new Proxy(/** @type {any} */computed, {
 		get(target, prop, receiver) {
 			if (prop === '_' || prop === '$') {
-				return atom.get()
+				return computed.get()
 			}
-			return Reflect.get(atom, prop, atom)
+			return Reflect.get(computed, prop, computed)
 		},
 		set(target, prop, val, receiver) {
-			return Reflect.set(atom, prop, val, atom)
+			return Reflect.set(computed, prop, val, computed)
 		},
-		...rest
 	})
+	/**
+	 * @returns {unknown}
+	 */
+	function fn() {
+		return computed.get()
+	}
 }

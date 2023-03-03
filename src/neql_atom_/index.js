@@ -1,13 +1,27 @@
 import { _atom_, onSet } from '../_nanostores/index.js'
 import { writable_atom___mix } from '../writable_atom___mix/index.js'
-export function neql_atom_(initialValue) {
-	const _atom = _atom_(initialValue)
+/** @typedef {import('nanostores').WritableAtom}WritableAtom */
+/** @typedef {import('../_types').WritableAtom_}WritableAtom_ */
+/**
+ * @param {unknown}initial
+ * @returns {WritableAtom_<unknown>}
+ * @private
+ */
+export function neql_atom_(initial) {
+	/** @type {WritableAtom<unknown>} */
+	const _atom = _atom_(initial)
 	decorate_neql_atom_(_atom)
 	return writable_atom___mix(_atom)
 }
+export { neql_atom_ as neql_atom$ }
+/**
+ * @param {WritableAtom<unknown>}atom
+ * @returns {() => void}
+ * @private
+ */
 export function decorate_neql_atom_(atom) {
 	return onSet(atom, ({ newValue, abort })=>{
 		if (atom.get() === newValue) abort()
 	})
 }
-export { neql_atom_ as neql_atom$, decorate_neql_atom_ as decorate_neql_atom$ }
+export { decorate_neql_atom_ as decorate_neql_atom$ }

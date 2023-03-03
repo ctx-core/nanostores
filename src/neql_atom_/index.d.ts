@@ -1,8 +1,10 @@
-import type { atom_T } from '../atom_'
-export declare function neql_atom_<Value, StoreExt = {}>(
+import type { WritableAtom } from 'nanostores'
+import type { WritableAtom_ } from '../_types'
+export declare function neql_atom_<Value>(
 	initialValue?:Value
-):atom_T<Value, StoreExt>
-export declare function decorate_neql_atom_<Value, StoreExt = {}>(
-	$atom$:atom_T<Value, StoreExt>
-):atom_T<Value, StoreExt>
-export { neql_atom_ as neql_atom$, decorate_neql_atom_ as decorate_neql_atom$ }
+):WritableAtom_<Value>
+export { neql_atom_ as neql_atom$ }
+export declare function decorate_neql_atom_<Value>(
+	atom:WritableAtom<Value>
+):()=>void
+export { decorate_neql_atom_ as decorate_neql_atom$ }
