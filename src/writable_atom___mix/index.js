@@ -6,7 +6,7 @@
  */
 export function writable_atom___mix(writable_atom) {
 	/** @type {WritableAtom_<unknown>} */
-	return new Proxy(/** @type {any} */writable_atom, {
+	return new Proxy(/** @type {any} */fn, {
 		get(target, prop, receiver) {
 			if (prop === '_' || prop === '$') {
 				return writable_atom.get()

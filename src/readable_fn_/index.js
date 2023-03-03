@@ -7,7 +7,7 @@
  */
 export function readable_fn_(computed) {
 	/** @type {ReadableAtom_<unknown>} */
-	return new Proxy(/** @type {any} */computed, {
+	return new Proxy(/** @type {any} */fn, {
 		get(target, prop, receiver) {
 			if (prop === '_' || prop === '$') {
 				return computed.get()

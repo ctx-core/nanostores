@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 3.1.1
+
+### Patch Changes
+
+- atom*,computed*,readable*fn*,writable*fn*: fix: function call
+
 ## 3.1.0
 
 ### Minor Changes
