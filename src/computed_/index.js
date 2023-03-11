@@ -1,4 +1,4 @@
-import { computed as _computed_ } from 'nanostores'
+import { computed as nanostores__computed_ } from 'nanostores'
 import { readable_fn_ } from '../readable_fn_/index.js'
 /** @typedef {import('nanostores').AnyStore}AnyStore */
 /** @typedef {import('nanostores').ReadableAtom}ReadableAtom */
@@ -16,7 +16,7 @@ export function computed_(
 	stores,
 	cb
 ) {
-	return mix_computed_(_computed_(stores, cb))
+	return mix_computed_(nanostores__computed_(stores, cb))
 }
 /**
  * @param {ReadableAtom<unknown>}computed
