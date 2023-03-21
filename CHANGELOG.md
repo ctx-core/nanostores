@@ -1,5 +1,13 @@
 # @ctx-core/nanostores
 
+## 3.1.10
+
+### Patch Changes
+
+- @ctx-core/function: ^21.12.1 -> ^21.12.2
+- Updated dependencies
+  - @ctx-core/object@27.1.7
+
 ## 3.1.9
 
 ### Patch Changes
