@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 3.1.19
+
+### Patch Changes
+
+- @ctx-core/number: ^8.6.2 -> ^8.6.3
+
 ## 3.1.18
 
 ### Patch Changes
