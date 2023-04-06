@@ -1,5 +1,12 @@
 # @ctx-core/nanostores
 
+## 3.2.0
+
+### Minor Changes
+
+- - atom_pair_T: aliased by split_atom\_\_ret_T
+- - atom*pair*: aliased by split*atom*
+
 ## 3.1.21
 
 ### Patch Changes
