@@ -1,5 +1,12 @@
 # @ctx-core/nanostores
 
+## 3.2.2
+
+### Patch Changes
+
+- typescript: ^5.0.3 -> ^5.0.4
+- eslint: ^8.37.0 -> ^8.38.0
+
 ## 3.2.1
 
 ### Patch Changes
