@@ -1,5 +1,15 @@
 # @ctx-core/nanostores
 
+## 3.2.22
+
+### Patch Changes
+
+- @ctx-core/monorepo: ^20.3.3 -> ^20.3.4
+- Updated dependencies
+  - @ctx-core/function@21.17.19
+  - @ctx-core/number@8.6.22
+  - @ctx-core/object@27.4.23
+
 ## 3.2.21
 
 ### Patch Changes
