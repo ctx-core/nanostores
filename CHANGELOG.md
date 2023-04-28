@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 3.3.1
+
+### Patch Changes
+
+- @ctx-core/object: ^27.4.23 -> ^27.4.24
+
 ## 3.3.0
 
 ### Minor Changes
