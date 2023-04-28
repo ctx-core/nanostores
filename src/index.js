@@ -1,5 +1,7 @@
 export * from './_nanostores/index.js'
 export * from './atom_/index.js'
+export * from './be_atom_triple_/index.js'
+export * from './be_computed_pair_/index.js'
 export * from './computed_/index.js'
 export * from './computed__set_a_/index.js'
 export * from './computed__set_o_/index.js'

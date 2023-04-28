@@ -1,5 +1,17 @@
 # @ctx-core/nanostores
 
+## 3.3.0
+
+### Minor Changes
+
+- - be*atom_triple*
+- - be*computed_pair*
+
+### Patch Changes
+
+- Updated dependencies
+  - @ctx-core/function@21.18.0
+
 ## 3.2.23
 
 ### Patch Changes
