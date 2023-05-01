@@ -1,5 +1,17 @@
 # @ctx-core/nanostores
 
+## 3.4.0
+
+### Minor Changes
+
+- be*computed_pair*: + be\_\_params?:be\_\_params_T argument
+- be*atom_triple*: + be\_\_params:be\_\_params_T argument
+
+### Patch Changes
+
+- Updated dependencies
+  - @ctx-core/object@27.4.25
+
 ## 3.3.1
 
 ### Patch Changes
