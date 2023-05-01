@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 3.4.1
+
+### Patch Changes
+
+- be*computed_pair*: fix: -base_name|+computed\_\_new arguments
+
 ## 3.4.0
 
 ### Minor Changes

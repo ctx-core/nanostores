@@ -46,7 +46,6 @@ test('be_computed_pair_|-base_name|+computed__new|+be__params', ()=>{
 		foobar__,
 		foobar_,
 	] = be_computed_pair_(
-		undefined,
 		()=>
 			computed_(base_,
 				base=>base + 1),
@@ -63,7 +62,6 @@ test('be_computed_pair_|-base_name|+computed__new|-be__params', ()=>{
 		foobar__,
 		foobar_,
 	] = be_computed_pair_(
-		undefined,
 		()=>
 			computed_(base_,
 				base=>base + 1))
