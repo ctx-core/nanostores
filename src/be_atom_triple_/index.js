@@ -30,7 +30,11 @@ export function be_atom_triple_(
 	} else if (!be__params) {
 		be__params = atom__new_OR_be__params
 	}
-	if (!atom__new) atom__new = ()=>atom_()
+	if (!atom__new) {
+		atom__new =
+			()=>
+				atom_()
+	}
 	const val__ =
 		id
 		? be_(id, atom__new, be__params)

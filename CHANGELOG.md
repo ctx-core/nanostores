@@ -1,5 +1,12 @@
 # @ctx-core/nanostores
 
+## 3.4.2
+
+### Patch Changes
+
+- be*atom_triple*: generic type default: A extends WritableAtom<T> = WritableAtom\_<T>
+- be*computed_pair*: generic type default: C extends ReadableAtom<T> = ReadableAtom\_<T>
+
 ## 3.4.1
 
 ### Patch Changes
