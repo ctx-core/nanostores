@@ -14,17 +14,22 @@ import type { ReadableAtom_, StoreValues } from '../_types'
  * ```
  */
 interface setter_computed__T {
-	<Value extends any, OriginStores extends AnyStore[] = AnyStore[]>(
+	<Value extends any, OriginStores extends AnyStore[]>(
 		stores:[...OriginStores],
 		cb:(values:StoreValues<OriginStores>, set:(newValue:Value)=>void)=>void
 	):SetterComputedAtom_<Value>
-	<Value extends any, OriginStore extends Store = Store>(
+	<Value extends any, OriginStore extends Store>(
 		stores:OriginStore,
 		cb:(value:StoreValue<OriginStore>, set:(newValue:Value)=>void)=>void
 	):SetterComputedAtom_<Value>
 }
 export declare const setter_computed_:setter_computed__T
-export interface SetterComputedAtom_<Value extends any> extends ReadableAtom_<Value> {
+export interface SetterComputedAtom_<Value extends any>
+	extends ReadableAtom_<Value>,
+		ReadableAtom<Value> {
 	store_a:AnyStore[]
 }
-export { setter_computed_ as setter_computed$, SetterComputedAtom_ as SetterComputedAtom$ }
+export {
+	setter_computed_ as setter_computed$,
+	SetterComputedAtom_ as SetterComputedAtom$
+}

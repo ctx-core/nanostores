@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 3.5.0
+
+### Minor Changes
+
+- setter_computed\_\_T: fix: type inference on cb function arguments
+
 ## 3.4.3
 
 ### Patch Changes
