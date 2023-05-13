@@ -1,39 +1,34 @@
 import type { Be, be__params_T, Ctx } from '@ctx-core/object'
-import type { WritableAtom } from 'nanostores'
+import type { StoreValue, WritableAtom } from 'nanostores'
 import type { WritableAtom_ } from '../_types'
 export declare function be_atom_triple_<
-	T = any,
-	A extends WritableAtom<T> = WritableAtom_<T>
+	A extends WritableAtom = WritableAtom_
 >(
 	be__params?:be__params_T
-):be_atom_triple_T<T, A>
+):be_atom_triple_T<A>
 export declare function be_atom_triple_<
-	T = any,
-	A extends WritableAtom<T> = WritableAtom_<T>
+	A extends WritableAtom = WritableAtom_
 >(
 	id:string|null|undefined,
 	be__params?:be__params_T
-):be_atom_triple_T<T, A>
+):be_atom_triple_T<A>
 export declare function be_atom_triple_<
-	T = any,
-	A extends WritableAtom<T> = WritableAtom_<T>
+	A extends WritableAtom = WritableAtom_
 >(
 	atom__new:(ctx:Ctx)=>A,
 	be__params?:be__params_T
-):be_atom_triple_T<T, A>
+):be_atom_triple_T<A>
 export declare function be_atom_triple_<
-	T = any,
-	A extends WritableAtom<T> = WritableAtom_<T>
+	A extends WritableAtom = WritableAtom_
 >(
 	id?:string|null|undefined,
 	atom__new?:((ctx:Ctx)=>A),
 	be__params?:be__params_T
-):be_atom_triple_T<T, A>
+):be_atom_triple_T<A>
 export type be_atom_triple_T<
-	T = any,
-	A extends WritableAtom<T> = WritableAtom_<T>
+	A extends WritableAtom = WritableAtom_
 > = [
 	Be<A>,
-	(ctx:Ctx)=>T,
-	(ctx:Ctx, val:T)=>void
+	(ctx:Ctx)=>StoreValue<A>,
+	(ctx:Ctx, val:StoreValue<A>)=>void
 ]

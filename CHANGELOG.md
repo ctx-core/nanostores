@@ -1,5 +1,12 @@
 # @ctx-core/nanostores
 
+## 4.0.0
+
+### Major Changes
+
+- be*atom_triple*: simplify generics: <A extends WritableAtom = WritableAtom_>
+- be*atom_triple*: simplify generics: <C extends ReadableAtom = ReadableAtom_>
+
 ## 3.5.0
 
 ### Minor Changes
