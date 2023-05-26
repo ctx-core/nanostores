@@ -55,10 +55,17 @@ test('setter_computed_|single & multiple (array) dependency stores', ()=>{
 })
 test('setter_computed_|child atoms|cb does not set', ()=>{
 	const atom = atom_(0)
-	const setter_computed = setter_computed_<number>(atom, ()=>{
-		return
-	})
-	const child_ = computed_(setter_computed, _=>_)
+	const setter_computed =
+		setter_computed_<
+			number,
+			typeof atom
+		>(atom, ()=>{
+			return
+		})
+	const child_ = computed_<
+		number,
+		typeof setter_computed
+	>(setter_computed, _=>_)
 	const child_listen_a:number[] = []
 	child_.listen(_=>child_listen_a.push(_))
 	atom(1)
@@ -70,8 +77,11 @@ test('setter_computed_|child atoms|cb does not set', ()=>{
 })
 test('setter_computed_|cb returns sets same value', ()=>{
 	const atom = atom_<Object>()
-	const setter_computed = setter_computed_<Object>(atom, (atom, set)=>{
-		set(atom)
+	const setter_computed = setter_computed_<
+		Object,
+		typeof atom
+	>(atom, (val, set)=>{
+		set(val)
 	})
 	const child_ = computed_(setter_computed, _=>_)
 	const child_listen_a:Object[] = []
@@ -88,12 +98,15 @@ test('setter_computed_|cb returns sets same value', ()=>{
 	equal(child_._, val)
 	equal(child_.$, val)
 	equal(child_.get(), val)
-	equal(child_listen_a, [val, val])
+	equal(child_listen_a, [val])
 })
 test('setter_computed_|cb returns set then no set', ()=>{
 	const atom = atom_<Object>()
 	let i = 0
-	const setter_computed = setter_computed_<Object>(atom, (atom, set)=>{
+	const setter_computed = setter_computed_<
+		Object,
+		typeof atom
+	>(atom, (atom, set)=>{
 		if (i < 2) {
 			set(atom)
 			i++

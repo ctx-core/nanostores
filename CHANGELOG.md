@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 4.0.3
+
+### Patch Changes
+
+- setter*computed*: fix: nanostores 0.9.0 compatibility
+
 ## 4.0.2
 
 ### Patch Changes
