@@ -1,5 +1,14 @@
 # @ctx-core/nanostores
 
+## 4.0.4
+
+### Patch Changes
+
+- setter*computed*:
+
+      ∋ onMount: store_val_a_.subscribe
+      ∋ onStop: unsubscribe
+
 ## 4.0.3
 
 ### Patch Changes

@@ -1,7 +1,6 @@
 import FakeTimers, { InstalledClock } from '@sinonjs/fake-timers'
-import { equal, is } from 'uvu/assert'
 import { test } from 'uvu'
-import { run } from '@ctx-core/function'
+import { equal, is } from 'uvu/assert'
 import { atom_, computed_, setter_computed_ } from '../index.js'
 let clock:InstalledClock
 test.before(()=>{
@@ -13,11 +12,12 @@ test.after(()=>{
 test('setter_computed_()._', ()=>{
 	let letter_ = atom_('a')
 	let number_ = atom_(0)
-	const a_ = setter_computed_([letter_, number_], ([letter, number], set)=>{
-		run(async ()=>{
+	const a_ = setter_computed_(
+		[letter_, number_],
+		(a, set)=>{
+			const [letter, number] = a
 			set(`${letter}-${String(number * 2)}`)
 		})
-	})
 	is(a_(), 'a-0')
 	is(a_._, 'a-0')
 	is(a_.$, 'a-0')
