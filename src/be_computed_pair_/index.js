@@ -27,10 +27,13 @@ export function be_computed_pair_(
 		computed__new = computed__new_OR_be__params
 	}
 	if (!computed__new) throw new Error('be_computed_pair_|computed__new argument is required')
+	const _be_ =
+		(be__params && be__params.be_)
+		?? be_
 	const val__ =
 		id
-		? be_(id, computed__new, be__params)
-		: be_(computed__new, be__params)
+		? _be_(id, computed__new, be__params)
+		: _be_(computed__new, be__params)
 	function val_(ctx) {
 		return val__(ctx).$
 	}

@@ -1,5 +1,14 @@
 # @ctx-core/nanostores
 
+## 4.1.0
+
+### Minor Changes
+
+- be\__params: + be_ param override support:
+
+      be_atom_triple_
+      be_computed_pair_
+
 ## 4.0.7
 
 ### Patch Changes

@@ -37,10 +37,13 @@ export function be_atom_triple_(
 			()=>
 				atom_()
 	}
+	const _be_ =
+		(be__params && be__params.be_)
+		?? be_
 	const val__ =
 		id
-		? be_(id, atom__new, be__params)
-		: be_(atom__new, be__params)
+		? _be_(id, atom__new, be__params)
+		: _be_(atom__new, be__params)
 	function val_(ctx) {
 		return val__(ctx).$
 	}
