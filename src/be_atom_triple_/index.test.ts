@@ -1,4 +1,4 @@
-import { ctx_, MapCtx } from '@ctx-core/object'
+import { ctx_, type MapCtx } from '@ctx-core/object'
 import { test } from 'uvu'
 import { equal } from 'uvu/assert'
 import { atom_, be_atom_triple_ } from '../index.js'
@@ -100,7 +100,7 @@ test('be_atom_triple_|-base_name|-atom__new|+be__params', ()=>{
 		foobar__,
 		foobar_,
 		foobar__set,
-	] = be_atom_triple_({ is_source_})
+	] = be_atom_triple_({ is_source_ })
 	equal(foobar__([ctx_(), ctx]).$, undefined)
 	equal(foobar_([ctx_(), ctx]), undefined)
 	foobar__set([ctx_(), ctx], 2)

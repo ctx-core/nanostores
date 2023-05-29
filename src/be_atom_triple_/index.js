@@ -17,7 +17,9 @@ export function be_atom_triple_(
 	be__params
 ) {
 	/** @type {string} */
-	let id, atom__new
+	let id
+	/** @type {(ctx:Ctx)=>WritableAtom} */
+	let atom__new
 	if (typeof id_OR_atom__new_OR_be__params === 'function') {
 		atom__new_OR_be__params = id_OR_atom__new_OR_be__params
 	} else if (typeof id_OR_atom__new_OR_be__params === 'object') {

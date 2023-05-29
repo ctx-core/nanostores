@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 4.0.6
+
+### Patch Changes
+
+- be*atom_triple*,be*computed_pair*: fix: jsdoc type
+
 ## 4.0.5
 
 ### Patch Changes

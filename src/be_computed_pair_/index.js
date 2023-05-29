@@ -16,7 +16,9 @@ export function be_computed_pair_(
 	be__params
 ) {
 	/** @type {string} */
-	let id, computed__new
+	let id
+	/** @type {(ctx:Ctx)=>ReadableAtom} */
+	let computed__new
 	if (typeof id_OR_computed__new === 'function') {
 		computed__new = id_OR_computed__new
 		be__params = computed__new_OR_be__params
