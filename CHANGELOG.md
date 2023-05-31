@@ -1,5 +1,16 @@
 # @ctx-core/nanostores
 
+## 4.2.0
+
+### Minor Changes
+
+- generics: + ctx_T extends Ctx = Ctx:
+
+      be_atom_triple_
+      be_atom_triple_T
+      be_computed_pair_
+      be_computed_pair_T
+
 ## 4.1.0
 
 ### Minor Changes
