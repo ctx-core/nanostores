@@ -1,5 +1,12 @@
 # @ctx-core/nanostores
 
+## 4.2.5
+
+### Patch Changes
+
+- Updated dependencies
+  - @ctx-core/object@28.0.0
+
 ## 4.2.4
 
 ### Patch Changes
