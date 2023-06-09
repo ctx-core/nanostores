@@ -1,4 +1,4 @@
-import type { AnyStore, Store, StoreValue } from 'nanostores'
+import type { AnyStore, ReadableAtom, Store, StoreValue } from 'nanostores'
 import type { ReadableAtom_, StoreValues } from '../_types'
 /**
  * Create derived store, which use generates value from another stores.
