@@ -38,7 +38,7 @@
 		"@ctx-core/function": "^21.18.0",
 		"@ctx-core/number": "^8.6.22",
 		"@ctx-core/object": "^28.0.1",
-		"nanostores": "^0.9.1"
+		"nanostores": "btakita/nanostores#32c1ac7a7403eb1db92e5c89c3763114a9a090fa"
 	},
 	"devDependencies": {
 		"@sinonjs/fake-timers": "^11.0.0",

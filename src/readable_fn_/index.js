@@ -6,6 +6,7 @@
  * @private
  */
 export function readable_fn_(computed) {
+	const fn = asub=>computed(asub)
 	/** @type {ReadableAtom_<unknown>} */
 	return new Proxy(/** @type {any} */fn, {
 		get(target, prop, receiver) {
@@ -18,10 +19,4 @@ export function readable_fn_(computed) {
 			return Reflect.set(computed, prop, val, computed)
 		},
 	})
-	/**
-	 * @returns {unknown}
-	 */
-	function fn() {
-		return computed.get()
-	}
 }

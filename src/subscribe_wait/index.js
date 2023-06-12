@@ -1,5 +1,5 @@
-import { isNumber_ } from '@ctx-core/number'
 import { promise_timeout } from '@ctx-core/function'
+import { isNumber_ } from '@ctx-core/number'
 /** @typedef {import('nanostores').ReadableAtom}ReadableAtom */
 /** @typedef {import('../_types').ExtractReadableAtomValue}ExtractReadableAtomValue */
 /**
@@ -13,9 +13,9 @@ export function subscribe_wait(
 	condition_fn,
 	timeout
 ) {
-	const _subscribe_wait = new Promise(resolve => {
+	const _subscribe_wait = new Promise(resolve=>{
 		let unsubscribe, unsubscribe_oninit = false
-		unsubscribe = store.subscribe($ => {
+		unsubscribe = store.subscribe($=>{
 			if (condition_fn($)) {
 				if (unsubscribe) unsubscribe()
 				else unsubscribe_oninit = true
@@ -24,5 +24,8 @@ export function subscribe_wait(
 		})
 		if (unsubscribe_oninit) unsubscribe()
 	})
-	return isNumber_(timeout) ? promise_timeout(_subscribe_wait, timeout) : _subscribe_wait
+	return (
+		isNumber_(timeout)
+		? promise_timeout(_subscribe_wait, timeout)
+		: _subscribe_wait)
 }

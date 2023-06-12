@@ -1,4 +1,5 @@
 import { be_ } from '@ctx-core/object'
+import { autosubscriber } from 'nanostores'
 /** @typedef {import('@ctx-core/object').be__params_T}be__params_T */
 /** @typedef {import('@ctx-core/object').Ctx}Ctx */
 /** @typedef {import('nanostores').ReadableAtom}ReadableAtom */
@@ -30,15 +31,16 @@ export function be_computed_pair_(
 	const _be_ =
 		(be__params && be__params.be_)
 		?? be_
-	const val__ =
+	const val$_ =
 		id
 		? _be_(id, computed__new, be__params)
 		: _be_(computed__new, be__params)
-	function val_(ctx) {
-		return val__(ctx).$
-	}
+	const val_ = (
+		ctx,
+		asub = autosubscriber()
+	)=>val$_(ctx)(asub)
 	return [
-		val__,
+		val$_,
 		val_,
 	]
 }

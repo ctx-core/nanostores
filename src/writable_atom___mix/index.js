@@ -5,6 +5,7 @@
  * @returns {WritableAtom_<unknown>}
  */
 export function writable_atom___mix(writable_atom) {
+	const fn = asub=>writable_atom(asub)
 	/** @type {WritableAtom_<unknown>} */
 	return new Proxy(/** @type {any} */fn, {
 		get(target, prop, receiver) {
@@ -21,11 +22,4 @@ export function writable_atom___mix(writable_atom) {
 			return Reflect.set(writable_atom, prop, val, writable_atom)
 		}
 	})
-	/**
-	 * @param {unknown}[$]
-	 * @returns {void|unknown}
-	 */
-	function fn($) {
-		return arguments.length ? writable_atom.set($) : writable_atom.get()
-	}
 }
