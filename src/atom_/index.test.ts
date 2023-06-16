@@ -7,7 +7,7 @@ test('atom_()()', ()=>{
 	is(atom._, 1)
 	is(atom.$, 1)
 	is(atom.get(), 1)
-	atom(2)
+	atom.set(2)
 	is(atom(), 2)
 	is(atom._, 2)
 	is(atom.$, 2)

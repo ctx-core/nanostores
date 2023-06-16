@@ -11,7 +11,7 @@ test('be_atom_triple_|+base_name|+atom__new|+be__params', ()=>{
 		return be_(...argv)
 	}) as typeof be_
 	const [
-		foobar__,
+		foobar$_,
 		foobar_,
 		foobar__set,
 	] = be_atom_triple_(
@@ -23,26 +23,26 @@ test('be_atom_triple_|+base_name|+atom__new|+be__params', ()=>{
 		}
 	)
 	equal(custom__be__called, true)
-	equal(foobar__([ctx_(), ctx]).$, 1)
+	equal(foobar$_([ctx_(), ctx]).$, 1)
 	equal(foobar_([ctx_(), ctx]), 1)
 	foobar__set([ctx_(), ctx], 2)
-	equal(foobar__([ctx_(), ctx]).$, 2)
+	equal(foobar$_([ctx_(), ctx]).$, 2)
 	equal(foobar_([ctx_(), ctx]), 2)
 })
 test('be_atom_triple_|+base_name|+atom__new|-be__params', ()=>{
 	const ctx = ctx_()
 	const [
-		foobar__,
+		foobar$_,
 		foobar_,
 		foobar__set,
 	] = be_atom_triple_(
 		'foobar',
 		()=>atom_(1),
 	)
-	equal(foobar__(ctx).$, 1)
+	equal(foobar$_(ctx).$, 1)
 	equal(foobar_(ctx), 1)
 	foobar__set(ctx, 2)
-	equal(foobar__(ctx).$, 2)
+	equal(foobar$_(ctx).$, 2)
 	equal(foobar_(ctx), 2)
 })
 test('be_atom_triple_|+base_name|-atom__new|+be__params', ()=>{
