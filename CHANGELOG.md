@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 5.0.4
+
+### Patch Changes
+
+- fix: import type { BoxAutosubscribe, UnboxAutosubscribe } from 'nanostores'
+
 ## 5.0.3
 
 ### Patch Changes

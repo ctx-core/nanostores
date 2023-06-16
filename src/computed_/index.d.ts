@@ -5,10 +5,10 @@ import type {
 	Store,
 	StoreValue
 } from 'nanostores'
-import {
+import type {
 	BoxAutosubscribe,
 	UnboxAutosubscribe
-} from 'nanostores/computed/index.js'
+} from 'nanostores'
 import type { ReadableAtom_, StoreValues } from '../_types'
 export declare const computed_:computed__T
 export declare function mix_computed_<
@@ -41,7 +41,3 @@ export interface computed__T {
 		cb: (...values: StoreValues<OriginStores>) => BoxAutosubscribe<Value> | Promise<BoxAutosubscribe<Value>>
 	): ReadableAtom_<UnboxAutosubscribe<Awaited<Value>>>
 }
-
-type BoxAutosubscribe<Value, Asub extends Autosubscribe<Value, any> = Autosubscribe<Value>> =
-	Asub | Value
-type UnboxAutosubscribe<Value> = Value extends Autosubscribe ? never : Value
