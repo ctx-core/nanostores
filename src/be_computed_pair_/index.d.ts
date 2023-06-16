@@ -21,5 +21,5 @@ export type be_computed_pair_T<
 	ctx_T extends Ctx = Ctx
 > = [
 	Be<C, ctx_T>,
-	(ctx:ctx_T, al?:Autosubscribe<StoreValue<C>>)=>StoreValue<C>
+	(ctx:ctx_T, asub?:Autosubscribe<StoreValue<C>>)=>StoreValue<C>
 ]

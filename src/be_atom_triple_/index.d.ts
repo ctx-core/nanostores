@@ -34,6 +34,6 @@ export type be_atom_triple_T<
 	ctx_T extends Ctx = Ctx
 > = [
 	Be<A>,
-	(ctx:ctx_T, al?:Autosubscribe<StoreValue<A>>)=>StoreValue<A>,
+	(ctx:ctx_T, asub?:Autosubscribe<StoreValue<A>>)=>StoreValue<A>,
 	(ctx:ctx_T, val:StoreValue<A>)=>void
 ]
