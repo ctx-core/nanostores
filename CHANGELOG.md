@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 5.0.1
+
+### Patch Changes
+
+- nanostores: ∋ btakita/nanostores#issues/188
+
 ## 5.0.0
 
 ### Major Changes
