@@ -1,5 +1,13 @@
 # @ctx-core/nanostores
 
+## 5.0.0
+
+### Major Changes
+
+- nanostores: + autosubscribe, async, reentrancy
+
+  uses PR https://github.com/nanostores/nanostores/pull/203
+
 ## 4.2.7
 
 ### Patch Changes
