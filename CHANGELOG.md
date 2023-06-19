@@ -1,5 +1,14 @@
 # @ctx-core/nanostores
 
+## 5.1.1
+
+### Patch Changes
+
+- fix: type inferences when val\_\_new returns PromiseLike:
+
+      val__be_atom_triple_
+      val__be_computed_pair_
+
 ## 5.1.0
 
 ### Minor Changes

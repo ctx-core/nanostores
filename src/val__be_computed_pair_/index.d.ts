@@ -5,17 +5,17 @@ export declare function val__be_computed_pair_<
 	V,
 	ctx_T extends Ctx = Ctx
 >(
-	val__new:(ctx:MapCtx, asub:Autosubscribe<V>)=>V,
+	val__new:(ctx:MapCtx, asub:Autosubscribe<V>)=>V|PromiseLike<V>,
 	be__params?:be__params_T
-):val__be_computed_pair_T<V, ctx_T>
+):val__be_computed_pair_T<Awaited<V>, ctx_T>
 export declare function val__be_computed_pair_<
 	V,
 	ctx_T extends Ctx = Ctx
 >(
 	name:string|null|undefined,
-	val__new:((ctx:MapCtx, asub:Autosubscribe<V>)=>V),
+	val__new:((ctx:MapCtx, asub:Autosubscribe<V>)=>V|PromiseLike<V>),
 	be__params?:be__params_T
-):val__be_computed_pair_T<V, ctx_T>
+):val__be_computed_pair_T<Awaited<V>, ctx_T>
 export type val__be_computed_pair_T<
 	V,
 	ctx_T extends Ctx = Ctx
