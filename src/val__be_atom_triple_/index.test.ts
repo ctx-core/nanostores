@@ -1,8 +1,8 @@
 import { be_, ctx_, type MapCtx } from '@ctx-core/object'
 import { test } from 'uvu'
 import { equal } from 'uvu/assert'
-import { atom_, be_atom_triple_ } from '../index.js'
-test('be_atom_triple_|+base_name|+atom__new|+be__params', ()=>{
+import { val__be_atom_triple_ } from '../index.js'
+test('val__be_atom_triple_|+base_name|+atom__new|+be__params', ()=>{
 	const ctx = ctx_()
 	const is_source_ = (map_ctx:MapCtx)=>map_ctx === ctx
 	let custom__be__called = false
@@ -14,9 +14,9 @@ test('be_atom_triple_|+base_name|+atom__new|+be__params', ()=>{
 		foobar$_,
 		foobar_,
 		foobar__set,
-	] = be_atom_triple_(
+	] = val__be_atom_triple_(
 		'foobar',
-		()=>atom_(1),
+		()=>1,
 		{
 			is_source_,
 			be_: custom__be_,
@@ -29,15 +29,15 @@ test('be_atom_triple_|+base_name|+atom__new|+be__params', ()=>{
 	equal(foobar$_([ctx_(), ctx]).$, 2)
 	equal(foobar_([ctx_(), ctx]), 2)
 })
-test('be_atom_triple_|+base_name|+atom__new|-be__params', ()=>{
+test('val__be_atom_triple_|+base_name|+atom__new|-be__params', ()=>{
 	const ctx = ctx_()
 	const [
 		foobar$_,
 		foobar_,
 		foobar__set,
-	] = be_atom_triple_(
+	] = val__be_atom_triple_(
 		'foobar',
-		()=>atom_(1),
+		()=>1,
 	)
 	equal(foobar$_(ctx).$, 1)
 	equal(foobar_(ctx), 1)
@@ -45,7 +45,7 @@ test('be_atom_triple_|+base_name|+atom__new|-be__params', ()=>{
 	equal(foobar$_(ctx).$, 2)
 	equal(foobar_(ctx), 2)
 })
-test('be_atom_triple_|+base_name|-atom__new|+be__params', ()=>{
+test('val__be_atom_triple_|+base_name|-atom__new|+be__params', ()=>{
 	const ctx = ctx_()
 	const is_source_ = (map_ctx:MapCtx)=>map_ctx === ctx
 	let custom__be__called = false
@@ -57,7 +57,7 @@ test('be_atom_triple_|+base_name|-atom__new|+be__params', ()=>{
 		foobar$_,
 		foobar_,
 		foobar__set,
-	] = be_atom_triple_('foobar', {
+	] = val__be_atom_triple_('foobar', {
 		is_source_,
 		be_: custom__be_,
 	})
@@ -68,12 +68,12 @@ test('be_atom_triple_|+base_name|-atom__new|+be__params', ()=>{
 	equal(foobar$_([ctx_(), ctx]).$, 2)
 	equal(foobar_([ctx_(), ctx]), 2)
 })
-test('be_atom_triple_|+base_name|-atom__new|-be__params', ()=>{
+test('val__be_atom_triple_|+base_name|-atom__new|-be__params', ()=>{
 	const [
 		foobar$_,
 		foobar_,
 		foobar__set,
-	] = be_atom_triple_('foobar')
+	] = val__be_atom_triple_('foobar')
 	const ctx = ctx_()
 	equal(foobar$_(ctx).$, undefined)
 	equal(foobar_(ctx), undefined)
@@ -81,7 +81,7 @@ test('be_atom_triple_|+base_name|-atom__new|-be__params', ()=>{
 	equal(foobar$_(ctx).$, 2)
 	equal(foobar_(ctx), 2)
 })
-test('be_atom_triple_|-base_name|+atom__new|+be__params', ()=>{
+test('val__be_atom_triple_|-base_name|+atom__new|+be__params', ()=>{
 	const ctx = ctx_()
 	const is_source_ = (map_ctx:MapCtx)=>map_ctx === ctx
 	let custom__be__called = false
@@ -93,9 +93,9 @@ test('be_atom_triple_|-base_name|+atom__new|+be__params', ()=>{
 		foobar$_,
 		foobar_,
 		foobar__set,
-	] = be_atom_triple_(
+	] = val__be_atom_triple_(
 		undefined,
-		()=>atom_(1),
+		()=>1,
 		{
 			is_source_,
 			be_: custom__be_,
@@ -107,12 +107,12 @@ test('be_atom_triple_|-base_name|+atom__new|+be__params', ()=>{
 	equal(foobar$_([ctx_(), ctx]).$, 2)
 	equal(foobar_([ctx_(), ctx]), 2)
 })
-test('be_atom_triple_|-base_name|+atom__new|-be__params', ()=>{
+test('val__be_atom_triple_|-base_name|+atom__new|-be__params', ()=>{
 	const [
 		foobar$_,
 		foobar_,
 		foobar__set,
-	] = be_atom_triple_(undefined, ()=>atom_(1))
+	] = val__be_atom_triple_(undefined, ()=>1)
 	const ctx = ctx_()
 	equal(foobar$_(ctx).$, 1)
 	equal(foobar_(ctx), 1)
@@ -120,7 +120,7 @@ test('be_atom_triple_|-base_name|+atom__new|-be__params', ()=>{
 	equal(foobar$_(ctx).$, 2)
 	equal(foobar_(ctx), 2)
 })
-test('be_atom_triple_|-base_name|-atom__new|+be__params', ()=>{
+test('val__be_atom_triple_|-base_name|-atom__new|+be__params', ()=>{
 	const ctx = ctx_()
 	const is_source_ = (map_ctx:MapCtx)=>map_ctx === ctx
 	let custom__be__called = false
@@ -132,7 +132,7 @@ test('be_atom_triple_|-base_name|-atom__new|+be__params', ()=>{
 		foobar$_,
 		foobar_,
 		foobar__set,
-	] = be_atom_triple_({
+	] = val__be_atom_triple_({
 		is_source_,
 		be_: custom__be_,
 	})
@@ -143,12 +143,12 @@ test('be_atom_triple_|-base_name|-atom__new|+be__params', ()=>{
 	equal(foobar$_([ctx_(), ctx]).$, 2)
 	equal(foobar_([ctx_(), ctx]), 2)
 })
-test('be_atom_triple_|-base_name|-atom__new|-be__params', ()=>{
+test('val__be_atom_triple_|-base_name|-atom__new|-be__params', ()=>{
 	const [
 		foobar$_,
 		foobar_,
 		foobar__set,
-	] = be_atom_triple_()
+	] = val__be_atom_triple_()
 	const ctx = ctx_()
 	equal(foobar$_(ctx).$, undefined)
 	equal(foobar_(ctx), undefined)

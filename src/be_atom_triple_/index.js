@@ -3,11 +3,10 @@ import { autosubscriber } from 'nanostores'
 import { atom_ } from '../atom_/index.js'
 /** @typedef {import('@ctx-core/object').be__params_T}be__params_T */
 /** @typedef {import('@ctx-core/object').Ctx}Ctx */
-/** @typedef {import('nanostores').WritableAtom}WritableAtom */
 /** @typedef {import('./index.d.ts').be_atom_triple_T}be_atom_triple_T */
 /**
- * @param {string|null|undefined|((ctx:Ctx)=>WritableAtom)|be__params_T}[id_OR_atom__new_OR_be__params]
- * @param {((ctx:Ctx)=>WritableAtom)|be__params_T}[atom__new_OR_be__params]
+ * @param {string|null|undefined|((ctx:Ctx)=>any)|be__params_T}[id_OR_atom__new_OR_be__params]
+ * @param {((ctx:Ctx)=>any)|be__params_T}[atom__new_OR_be__params]
  * @param {be__params_T}[be__params]
  * @returns {be_atom_triple_T}
  * @private
@@ -19,7 +18,7 @@ export function be_atom_triple_(
 ) {
 	/** @type {string} */
 	let id
-	/** @type {(ctx:Ctx)=>WritableAtom} */
+	/** @type {(ctx:Ctx)=>any} */
 	let atom__new
 	if (typeof id_OR_atom__new_OR_be__params === 'function') {
 		atom__new_OR_be__params = id_OR_atom__new_OR_be__params

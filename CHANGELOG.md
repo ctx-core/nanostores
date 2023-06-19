@@ -1,5 +1,24 @@
 # @ctx-core/nanostores
 
+## 5.1.0
+
+### Minor Changes
+
+- - val\__be_atom_triple_
+- - val\_\_be_computed_pair_T
+- - val\_\_be_atom_triple_T
+- - val\__be_memo_pair_
+
+### Patch Changes
+
+- fix: is*source*: matching ctx:MapCtx passed into callback:
+
+      be_atom_triple_
+      be_computed_pair_
+
+- Updated dependencies
+  - @ctx-core/object@28.0.2
+
 ## 5.0.5
 
 ### Patch Changes
