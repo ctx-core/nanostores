@@ -34,5 +34,5 @@ export type _be_atom_arg_triple_T<
 > = [
 	id:string|null,
 	val__new:(ctx:ctx_T, asub?:Autosubscribe)=>V,
-	(ctx:ctx_T, val:StoreValue<V>)=>void
+	be__params:be__params_T
 ]

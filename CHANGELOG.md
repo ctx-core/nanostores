@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 5.2.1
+
+### Patch Changes
+
+- \_be_atom_arg_triple_T,\_be_computed_arg_triple_T: fix: type
+
 ## 5.2.0
 
 ### Minor Changes
