@@ -1,5 +1,17 @@
 # @ctx-core/nanostores
 
+## 5.1.2
+
+### Patch Changes
+
+- val**be*atom_triple*,val**be*computed_pair*:
+
+      fix: val__new returns BoxAutosubscribe<V>|PromiseLike<BoxAutosubscribe<V>>
+
+- val**be*atom_triple*,val**be*computed_pair*:
+
+      return type: fix: + UnboxAutosubscribe
+
 ## 5.1.1
 
 ### Patch Changes

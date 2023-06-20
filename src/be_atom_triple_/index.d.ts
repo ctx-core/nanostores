@@ -26,7 +26,7 @@ export declare function be_atom_triple_<
 	ctx_T extends Ctx = Ctx
 >(
 	id?:string|null|undefined,
-	atom__new?:((ctx:MapCtx)=>A),
+	atom__new?:(ctx:MapCtx)=>A,
 	be__params?:be__params_T
 ):be_atom_triple_T<A, ctx_T>
 export type be_atom_triple_T<
