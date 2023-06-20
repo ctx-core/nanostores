@@ -1,5 +1,16 @@
 # @ctx-core/nanostores
 
+## 5.2.0
+
+### Minor Changes
+
+- - - _be_atom_arg_triple_,_be_computed_arg_triple_
+
+### Patch Changes
+
+- Updated dependencies
+  - @ctx-core/object@28.0.3
+
 ## 5.1.2
 
 ### Patch Changes

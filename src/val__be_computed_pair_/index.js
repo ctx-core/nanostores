@@ -1,5 +1,6 @@
 import { be_ } from '@ctx-core/object'
 import { autosubscriber } from 'nanostores'
+import { _be_atom_arg_triple_ } from '../_be_computed_arg_triple_/index.js'
 import { computed_ } from '../computed_/index.js'
 /** @typedef {import('@ctx-core/object').be__params_T}be__params_T */
 /** @typedef {import('@ctx-core/object').Ctx}Ctx */
@@ -12,22 +13,10 @@ import { computed_ } from '../computed_/index.js'
  * @returns {val__be_computed_pair_T}
  * @private
  */
-export function val__be_computed_pair_(
-	id_OR_val__new,
-	val__new_OR_be__params,
-	be__params
-) {
-	/** @type {string} */
-	let id
-	/** @type {(ctx:Ctx, asub:Autosubscribe)=>any} */
-	let val__new
-	if (typeof id_OR_val__new === 'function') {
-		val__new = id_OR_val__new
-		be__params = val__new_OR_be__params
-	} else {
-		id = id_OR_val__new
-		val__new = val__new_OR_be__params
-	}
+export function val__be_computed_pair_(...arg_a) {
+	const [id, val__new, be__params] =
+		/** @type {[string, (ctx:Ctx)=>any, be__params_T]} */
+		_be_atom_arg_triple_(...arg_a)
 	if (!val__new) throw new Error('val__be_computed_pair_|val__new argument is required')
 	const _be_ =
 		(be__params && be__params.be_)

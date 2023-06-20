@@ -3,14 +3,13 @@ import { test } from 'uvu'
 import { equal } from 'uvu/assert'
 import { atom_, be_atom_triple_, be_computed_pair_, computed_ } from '../index.js'
 test('be_computed_pair_|+base_name|+computed__new|+be__params', ()=>{
+	const ctx = ctx_()
+	const is_source_ = (map_ctx:MapCtx)=>map_ctx === ctx
 	const [
 		base$_,
 		_base_,
 		base__set,
-	] = be_atom_triple_(()=>atom_(1))
-	const ctx = ctx_()
-	const is_source_ = (map_ctx:MapCtx)=>
-		map_ctx === ctx
+	] = be_atom_triple_(()=>atom_(1), { is_source_ })
 	let custom__be__called = false
 	const custom__be_ = ((...argv:Parameters<typeof be_>)=>{
 		custom__be__called = true
@@ -57,13 +56,15 @@ test('be_computed_pair_|+base_name|+computed__new|-be__params', ()=>{
 	equal(foobar_(ctx), 3)
 })
 test('be_computed_pair_|-base_name|+computed__new|+be__params', ()=>{
+	const ctx = ctx_()
+	const is_source_ = (map_ctx:MapCtx)=>map_ctx === ctx
 	const [
 		base$_,
 		_base_,
 		base__set,
-	] = be_atom_triple_(()=>atom_(1))
-	const ctx = ctx_()
-	const is_source_ = (map_ctx:MapCtx)=>map_ctx === ctx
+	] = be_atom_triple_(()=>
+			atom_(1),
+		{ is_source_ })
 	let custom__be__called = false
 	const custom__be_ = ((...argv:Parameters<typeof be_>)=>{
 		custom__be__called = true

@@ -1,8 +1,10 @@
 import { be_ } from '@ctx-core/object'
 import { autosubscriber } from 'nanostores'
+import { _be_atom_arg_triple_ } from '../_be_atom_arg_triple_/index.js'
 import { atom_ } from '../atom_/index.js'
 /** @typedef {import('@ctx-core/object').be__params_T}be__params_T */
 /** @typedef {import('@ctx-core/object').Ctx}Ctx */
+/** @typedef {import('nanostores').WritableAtom}WritableAtom */
 /** @typedef {import('./index.d.ts').be_atom_triple_T}be_atom_triple_T */
 /**
  * @param {string|null|undefined|((ctx:Ctx)=>any)|be__params_T}[id_OR_atom__new_OR_be__params]
@@ -11,27 +13,14 @@ import { atom_ } from '../atom_/index.js'
  * @returns {be_atom_triple_T}
  * @private
  */
-export function be_atom_triple_(
-	id_OR_atom__new_OR_be__params,
-	atom__new_OR_be__params,
-	be__params
-) {
-	/** @type {string} */
-	let id
-	/** @type {(ctx:Ctx)=>any} */
-	let atom__new
-	if (typeof id_OR_atom__new_OR_be__params === 'function') {
-		atom__new_OR_be__params = id_OR_atom__new_OR_be__params
-	} else if (typeof id_OR_atom__new_OR_be__params === 'object') {
-		be__params = id_OR_atom__new_OR_be__params
-	} else {
-		id = id_OR_atom__new_OR_be__params
-	}
-	if (typeof atom__new_OR_be__params === 'function') {
-		atom__new = atom__new_OR_be__params
-	} else if (!be__params) {
-		be__params = atom__new_OR_be__params
-	}
+export function be_atom_triple_(...arg_a) {
+	let [
+		id,
+		atom__new,
+		be__params
+	] =
+		/** @type {[string, (ctx:Ctx)=>WritableAtom, be__params_T]} */
+		_be_atom_arg_triple_(...arg_a)
 	if (!atom__new) {
 		atom__new =
 			()=>
