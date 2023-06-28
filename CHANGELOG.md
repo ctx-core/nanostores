@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 5.2.2
+
+### Patch Changes
+
+- ∋ btakita/nanostores#issues/188-atom-fn
+
 ## 5.2.1
 
 ### Patch Changes
