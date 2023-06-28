@@ -29,7 +29,7 @@ export { computed_ as computed$ }
  * ```
  */
 export interface computed__T {
-	<Value extends any, Asub extends Autosubscribe<Value, any> = Autosubscribe<Value, any>>(
+	<Value extends any, Asub extends Autosubscribe<Value> = Autosubscribe<Value>>(
 		cb: (asub?: Asub) => BoxAutosubscribe<Value, Asub> | Promise<BoxAutosubscribe<Value, Asub>>
 	): ReadableAtom_<UnboxAutosubscribe<Awaited<Value>>>
 	<Value extends any, OriginStore extends Store>(

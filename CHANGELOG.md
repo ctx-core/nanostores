@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 5.2.4
+
+### Patch Changes
+
+- computed\_\_T: fix: Autosubscribe<Value>
+
 ## 5.2.3
 
 ### Patch Changes
