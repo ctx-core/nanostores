@@ -1,5 +1,15 @@
 # @ctx-core/nanostores
 
+## 5.2.7
+
+### Patch Changes
+
+- btakita/nanostores#issues/188-atom-fn update:
+
+      .on=>.onStart
+      .off=>.onStop
+      autosubscriber=>autosubscribe
+
 ## 5.2.6
 
 ### Patch Changes
