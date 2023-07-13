@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/nanostores",
-	"version": "5.2.7",
+	"version": "5.2.8",
 	"description": "ctx-core nanostores",
 	"keywords": [
 		"ctx-core",
@@ -38,7 +38,7 @@
 		"@ctx-core/function": "^21.18.0",
 		"@ctx-core/number": "^8.6.22",
 		"@ctx-core/object": "^28.0.3",
-		"nanostores": "btakita/nanostores#issues/188-atom-fn"
+		"nanostores": "btakita/nanostores#387fc209c03bc9e243014f45ae593d75f3695086"
 	},
 	"devDependencies": {
 		"@sinonjs/fake-timers": "^11.0.0",
