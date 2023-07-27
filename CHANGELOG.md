@@ -1,5 +1,15 @@
 # @ctx-core/nanostores
 
+## 6.0.0
+
+### Major Changes
+
+- nanostores >= 0.9 performs a strict equality test to notify of a change:
+
+      - refresh_atom_
+      - mix_refresh
+      - refresh_atom_
+
 ## 5.2.9
 
 ### Patch Changes
