@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 6.0.3
+
+### Patch Changes
+
+- @sinonjs/fake-timers: ^11.0.0 -> ^11.1.0
+
 ## 6.0.2
 
 ### Patch Changes
