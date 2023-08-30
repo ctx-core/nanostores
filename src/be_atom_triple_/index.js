@@ -7,9 +7,6 @@ import { atom_ } from '../atom_/index.js'
 /** @typedef {import('nanostores').WritableAtom}WritableAtom */
 /** @typedef {import('./index.d.ts').be_atom_triple_T}be_atom_triple_T */
 /**
- * @param {string|null|undefined|((ctx:Ctx)=>any)|be__params_T}[id_OR_atom__new_OR_be__params]
- * @param {((ctx:Ctx)=>any)|be__params_T}[atom__new_OR_be__params]
- * @param {be__params_T}[be__params]
  * @returns {be_atom_triple_T}
  * @private
  */
@@ -18,9 +15,7 @@ export function be_atom_triple_(...arg_a) {
 		id,
 		atom__new,
 		be__params
-	] =
-		/** @type {[string, (ctx:Ctx)=>WritableAtom, be__params_T]} */
-		_be_atom_arg_triple_(...arg_a)
+	] = _be_atom_arg_triple_(...arg_a)
 	if (!atom__new) {
 		atom__new =
 			()=>
