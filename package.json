@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/nanostores",
-	"version": "6.0.5",
+	"version": "6.0.6",
 	"description": "ctx-core nanostores",
 	"keywords": [
 		"ctx-core",
@@ -37,7 +37,7 @@
 	"dependencies": {
 		"@ctx-core/function": "^21.19.0",
 		"@ctx-core/number": "^8.6.22",
-		"@ctx-core/object": "^28.0.4",
+		"@ctx-core/object": "^28.0.5",
 		"nanostores": "btakita/nanostores#c4e4ae15a73c64de28b27ffe4f316579ad6abc56"
 	},
 	"devDependencies": {
@@ -47,7 +47,7 @@
 		"check-dts": "^0.7.2",
 		"eslint": "^8.48.0",
 		"tsx": "^3.12.7",
-		"typescript": "^5.2.2",
+		"typescript": "^5.3.0-dev.20230829",
 		"uvu": "^0.5.6"
 	},
 	"publishConfig": {
