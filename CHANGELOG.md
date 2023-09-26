@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 6.0.9
+
+### Patch Changes
+
+- btakita/nanostores#f56cc5871b02cd46400bb311388e8395ac4b5f02
+
 ## 6.0.8
 
 ### Patch Changes

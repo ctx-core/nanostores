@@ -1,5 +1,5 @@
 import { be_ } from '@ctx-core/object'
-import { autosubscribe } from 'nanostores'
+import { autosubscriber } from 'nanostores'
 import { _be_atom_arg_triple_ } from '../_be_computed_arg_triple_/index.js'
 import { computed_ } from '../computed_/index.js'
 /** @typedef {import('@ctx-core/object').be__params_T}be__params_T */
@@ -27,7 +27,7 @@ export function val__be_computed_pair_(...arg_a) {
 		: _be_(ctx=>computed_(asub=>val__new(ctx, asub)), be__params)
 	const val_ = (
 		ctx,
-		use = autosubscribe()
+		use = autosubscriber()
 	)=>val$_(ctx)(use)
 	return [
 		val$_,
