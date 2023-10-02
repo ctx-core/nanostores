@@ -13,7 +13,7 @@ export declare function val__be_computed_pair_<
 	V,
 	ctx_T extends Ctx = Ctx
 >(
-	name:string|null|undefined,
+	id:string|null|undefined,
 	val__new:((ctx:MapCtx, asub:Autosubscribe<V>)=>
 		BoxAutosubscribe<V>|PromiseLike<BoxAutosubscribe<V>>),
 	be__params?:be__params_T

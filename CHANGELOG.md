@@ -1,5 +1,13 @@
 # @ctx-core/nanostores
 
+## 6.0.11
+
+### Patch Changes
+
+- be*computed_pair*: arguments: name=>id
+- Updated dependencies
+  - @ctx-core/object@28.1.0
+
 ## 6.0.10
 
 ### Patch Changes

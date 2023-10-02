@@ -12,7 +12,7 @@ export declare function be_computed_pair_<
 	C extends ReadableAtom = ReadableAtom_<any>,
 	ctx_T extends Ctx = Ctx
 >(
-	name:string|null|undefined,
+	id:string|null|undefined,
 	computed__new:(ctx:MapCtx)=>C,
 	be__params?:be__params_T
 ):be_computed_pair_T<C, ctx_T>
