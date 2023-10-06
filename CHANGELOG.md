@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 6.0.12
+
+### Patch Changes
+
+- @ctx-core/object: ^28.1.0 -> ^28.2.0
+
 ## 6.0.11
 
 ### Patch Changes
