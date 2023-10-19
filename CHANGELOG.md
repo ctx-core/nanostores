@@ -1,5 +1,17 @@
 # @ctx-core/nanostores
 
+## 6.0.13
+
+### Patch Changes
+
+- @sinonjs/fake-timers: ^11.1.0 -> ^11.2.1
+- @types/sinonjs\_\_fake-timers: ^8.1.3 -> ^8.1.4
+- tsx: ^3.13.0 -> ^3.14.0
+- Updated dependencies
+  - @ctx-core/function@21.20.2
+  - @ctx-core/number@8.6.24
+  - @ctx-core/object@28.2.1
+
 ## 6.0.12
 
 ### Patch Changes
