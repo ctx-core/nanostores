@@ -1,5 +1,5 @@
 import type { Be, be__params_T, Ctx, MapCtx } from '@ctx-core/object'
-import type { Autosubscribe, StoreValue, WritableAtom } from 'nanostores'
+import type { StoreValue, WritableAtom } from 'nanostores'
 import type { WritableAtom_ } from '../_types'
 export declare function be_atom_triple_<
 	A extends WritableAtom = WritableAtom_<any>,
@@ -34,6 +34,6 @@ export type be_atom_triple_T<
 	ctx_T extends Ctx = Ctx
 > = [
 	Be<A>,
-	(ctx:ctx_T, asub?:Autosubscribe)=>StoreValue<A>,
+	(ctx:ctx_T)=>StoreValue<A>,
 	(ctx:ctx_T, val:StoreValue<A>)=>void
 ]

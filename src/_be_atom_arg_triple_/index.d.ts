@@ -1,5 +1,5 @@
-import { be__params_T, Ctx, MapCtx } from '@ctx-core/object'
-import { Autosubscribe, StoreValue } from 'nanostores'
+import type { be__params_T, Ctx, MapCtx } from '@ctx-core/object'
+import type { Task } from 'nanostores'
 export declare function _be_atom_arg_triple_<
 	V,
 	ctx_T extends Ctx = Ctx
@@ -33,6 +33,6 @@ export type _be_atom_arg_triple_T<
 	ctx_T extends Ctx = Ctx
 > = [
 	id:string|null,
-	val__new:(ctx:ctx_T, asub?:Autosubscribe)=>V,
+	val__new:(ctx:ctx_T)=>Task<V>|V,
 	be__params:be__params_T
 ]

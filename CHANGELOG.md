@@ -1,5 +1,17 @@
 # @ctx-core/nanostores
 
+## 7.0.0
+
+### Major Changes
+
+- ∋ btakita/nanostores#9f42323d8ddfa65a76851085f6a46a5e2fa51f1e: based off next branch on nanostores/nanostores
+- arguments: - use:
+
+  be*atom_triple*
+  be*computed_pair*
+  val**be*atom_triple*
+  val**be*computed_pair*
+
 ## 6.0.15
 
 ### Patch Changes

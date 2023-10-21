@@ -1,7 +1,6 @@
 import { be_ } from '@ctx-core/object'
-import { autosubscribe } from 'nanostores'
-import { atom_ } from '../atom_/index.js'
 import { _be_atom_arg_triple_ } from '../_be_atom_arg_triple_/index.js'
+import { atom_ } from '../atom_/index.js'
 /** @typedef {import('@ctx-core/object').be__params_T}be__params_T */
 /** @typedef {import('@ctx-core/object').Ctx}Ctx */
 /** @typedef {import('./index.d.ts').be_atom_triple_T}be_atom_triple_T */
@@ -27,10 +26,7 @@ export function val__be_atom_triple_(...arg_a) {
 		id
 		? _be_(id, ctx=>atom_(val__new(ctx)), be__params)
 		: _be_(ctx=>atom_(val__new(ctx)), be__params)
-	const val_ = (
-		ctx,
-		use = autosubscribe()
-	)=>val$_(ctx)(use)
+	const val_ = ctx=>val$_(ctx)()
 	const val__set = (ctx, val)=>{
 		val$_(ctx).set(val)
 	}

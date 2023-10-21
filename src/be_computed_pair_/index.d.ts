@@ -1,5 +1,5 @@
 import type { Be, be__params_T, Ctx, MapCtx } from '@ctx-core/object'
-import type { Autosubscribe, ReadableAtom, StoreValue } from 'nanostores'
+import type { ReadableAtom, StoreValue, Task } from 'nanostores'
 import type { ReadableAtom_ } from '../_types'
 export declare function be_computed_pair_<
 	C extends ReadableAtom = ReadableAtom_<any>,
@@ -21,5 +21,5 @@ export type be_computed_pair_T<
 	ctx_T extends Ctx = Ctx
 > = [
 	Be<C, ctx_T>,
-	(ctx:ctx_T, asub?:Autosubscribe)=>StoreValue<C>
+	(ctx:ctx_T)=>Task<StoreValue<C>>|StoreValue<C>
 ]
