@@ -1,4 +1,4 @@
-import type { AnyStore, ReadableAtom, Task } from 'nanostores'
+import type { AnyStore, ReadableAtom, Store, StoreValue, Task } from 'nanostores'
 import type { ReadableAtom_, StoreValues } from '../_types'
 export declare const computed_:computed__T
 export declare function mix_computed_<
@@ -19,6 +19,10 @@ export { computed_ as computed$ }
  * ```
  */
 export interface computed__T {
+	<Value extends any, OriginStore extends Store>(
+		stores: OriginStore,
+		cb: (value: StoreValue<OriginStore>) => Task<Value> | Value
+	): ReadableAtom_<Value>
 	<Value extends any, OriginStores extends AnyStore[]>(
 		stores:[...OriginStores],
 		cb:(...values:StoreValues<OriginStores>)=>Task<Value>|Value

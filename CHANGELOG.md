@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 7.0.2
+
+### Patch Changes
+
+- computed\_\_T: fix: + single Store argument
+
 ## 7.0.1
 
 ### Patch Changes
