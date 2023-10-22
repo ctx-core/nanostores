@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 7.0.1
+
+### Patch Changes
+
+- val\__be_computed_pair_: fix: jsdocs
+
 ## 7.0.0
 
 ### Major Changes
