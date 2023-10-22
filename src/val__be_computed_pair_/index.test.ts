@@ -22,8 +22,8 @@ test('val__be_computed_pair_|+base_name|+computed__new|+be__params', ()=>{
 		foobar_,
 	] = val__be_computed_pair_(
 		'foobar',
-		(ctx, asub)=>
-			base_(ctx, asub) + 1,
+		ctx=>
+			base_(ctx) + 1,
 		{
 			is_source_,
 			be_: custom__be_,
@@ -46,8 +46,8 @@ test('val__be_computed_pair_|+base_name|+computed__new|-be__params', ()=>{
 		foobar_,
 	] = val__be_computed_pair_(
 		'foobar',
-		(ctx, asub)=>
-			base_(ctx, asub) + 1)
+		ctx=>
+			base_(ctx) + 1)
 	const ctx = ctx__new()
 	equal(foobar$_(ctx).$, 2)
 	equal(foobar_(ctx), 2)
@@ -76,7 +76,7 @@ test('val__be_computed_pair_|-base_name|+computed__new|+be__params', ()=>{
 		foobar$_,
 		foobar_,
 	] = val__be_computed_pair_(
-		(ctx, asub)=>base_(ctx, asub) + 1,
+		ctx=>base_(ctx) + 1,
 		{
 			is_source_,
 			be_: custom__be_,
@@ -100,7 +100,7 @@ test('val__be_computed_pair_|-base_name|+computed__new|-be__params', ()=>{
 		foobar$_,
 		foobar_,
 	] = val__be_computed_pair_(
-		(ctx, asub)=>base_(ctx, asub) + 1)
+		ctx=>base_(ctx) + 1)
 	const ctx = ctx__new()
 	equal(foobar$_(ctx).$, 2)
 	equal(foobar_(ctx), 2)

@@ -34,6 +34,6 @@ export type val__be_atom_triple_T<
 	ctx_T extends Ctx = Ctx
 > = [
 	Be<WritableAtom_<V>>,
-	(ctx:ctx_T)=>Task<V>|V,
+	(ctx:ctx_T)=>V,
 	(ctx:ctx_T, val:V)=>void
 ]

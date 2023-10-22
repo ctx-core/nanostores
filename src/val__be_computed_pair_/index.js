@@ -21,8 +21,8 @@ export function val__be_computed_pair_(...arg_a) {
 		?? be_
 	const val$_ =
 		id
-		? _be_(id, ctx=>computed_(asub=>val__new(ctx, asub)), be__params)
-		: _be_(ctx=>computed_(asub=>val__new(ctx, asub)), be__params)
+		? _be_(id, ctx=>computed_(()=>val__new(ctx)), be__params)
+		: _be_(ctx=>computed_(()=>val__new(ctx)), be__params)
 	const val_ = ctx=>val$_(ctx)()
 	return [
 		val$_,

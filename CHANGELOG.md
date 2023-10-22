@@ -1,5 +1,14 @@
 # @ctx-core/nanostores
 
+## 7.0.3
+
+### Patch Changes
+
+- fix: type errors: remove Task<V> from type union:
+
+      val__be_atom_triple_T
+      val__be_computed_pair_T
+
 ## 7.0.2
 
 ### Patch Changes

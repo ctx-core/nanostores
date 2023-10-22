@@ -21,5 +21,5 @@ export type val__be_computed_pair_T<
 	ctx_T extends Ctx = Ctx
 > = [
 	Be<ReadableAtom_<V>, ctx_T>,
-	(ctx:ctx_T)=>Task<V>|V
+	(ctx:ctx_T)=>V
 ]
