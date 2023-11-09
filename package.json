@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/nanostores",
-	"version": "7.0.6",
+	"version": "7.0.7",
 	"description": "ctx-core nanostores",
 	"keywords": [
 		"ctx-core",
@@ -37,7 +37,7 @@
 	"dependencies": {
 		"@ctx-core/function": "^21.20.2",
 		"@ctx-core/number": "^8.6.24",
-		"@ctx-core/object": "^29.0.0",
+		"@ctx-core/object": "^29.1.0",
 		"nanostores": "btakita/nanostores#9f42323d8ddfa65a76851085f6a46a5e2fa51f1e"
 	},
 	"devDependencies": {
