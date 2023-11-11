@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/nanostores",
-	"version": "7.0.8",
+	"version": "7.1.0",
 	"description": "ctx-core nanostores",
 	"keywords": [
 		"ctx-core",
@@ -18,10 +18,37 @@
 	"license": "Apache-2.0",
 	"author": "Brian Takita",
 	"type": "module",
-	"types": "./src/index.d.ts",
-	"svelte": "./src/index.js",
+	"files": [
+		"*.d.ts",
+		"./_be_atom_arg_triple_",
+		"./_be_computed_arg_triple_",
+		"./_nanostores",
+		"./_types",
+		"./atom_",
+		"./atom_pair_",
+		"./be_atom_triple_",
+		"./be_computed_pair_",
+		"./computed_",
+		"./computed__set_a_",
+		"./computed__set_o_",
+		"./computed_set_a_",
+		"./computed_set_o_",
+		"./listen_change",
+		"./listen_once",
+		"./listen_prev",
+		"./neq_atom_",
+		"./neql_atom_",
+		"./readable_fn_",
+		"./setter_computed_",
+		"./subscribe_wait",
+		"./subscribe_wait_timeout",
+		"./val__be_atom_triple_",
+		"./val__be_computed_pair_",
+		"./writable_atom___mix"
+	],
+	"types": "./index.d.ts",
 	"exports": {
-		".": "./src/index.js",
+		".": "./index.js",
 		"./package.json": "./package.json"
 	},
 	"bin": {},
@@ -35,9 +62,9 @@
 		"test-unit-coverage": "c8 pnpm test-unit"
 	},
 	"dependencies": {
-		"@ctx-core/function": "^21.20.2",
-		"@ctx-core/number": "^8.6.24",
-		"@ctx-core/object": "^30.0.0",
+		"@ctx-core/function": "^21.21.0",
+		"@ctx-core/number": "^8.7.0",
+		"@ctx-core/object": "^30.1.0",
 		"nanostores": "btakita/nanostores#9f42323d8ddfa65a76851085f6a46a5e2fa51f1e"
 	},
 	"devDependencies": {

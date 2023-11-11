@@ -1,5 +1,28 @@
 # @ctx-core/nanostores
 
+## 7.1.0
+
+### Minor Changes
+
+- fix:types package.json exports
+- tsconfig:
+
+      "module": "ESNext"
+      "moduleResolution": "nodenext"
+      "target": "ESNext"
+
+### Patch Changes
+
+- package.json: - "svelte": "./src/index.js"
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/function@21.21.0
+  - @ctx-core/number@8.7.0
+  - @ctx-core/object@30.1.0
+
 ## 7.0.8
 
 ### Patch Changes
