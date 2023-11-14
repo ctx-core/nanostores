@@ -1,4 +1,4 @@
-import { subscribe_wait } from '../subscribe_wait'
+import { subscribe_wait } from '../subscribe_wait/index.js'
 /** @typedef {import('nanostores').ReadableAtom}ReadableAtom */
 /** @typedef {import('../_types/index.d.ts').ExtractReadableAtomValue}ExtractReadableAtomValue */
 /**
