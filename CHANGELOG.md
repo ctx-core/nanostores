@@ -1,5 +1,14 @@
 # @ctx-core/nanostores
 
+## 7.1.12
+
+### Patch Changes
+
+- @ctx-core/object: ^30.4.2 -> ^30.4.3
+- Updated dependencies
+  - @ctx-core/function@21.22.6
+  - @ctx-core/number@8.7.11
+
 ## 7.1.11
 
 ### Patch Changes
