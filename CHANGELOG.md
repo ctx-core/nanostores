@@ -1,5 +1,16 @@
 # @ctx-core/nanostores
 
+## 8.0.0
+
+### Major Changes
+
+- - _be_computed_arg_triple_
+- - _be_atom_arg_triple_
+
+### Patch Changes
+
+- ∋ be_arg_triple\_\_new
+
 ## 7.1.16
 
 ### Patch Changes

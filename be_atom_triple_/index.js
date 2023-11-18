@@ -1,5 +1,4 @@
-import { be_ } from '@ctx-core/object'
-import { _be_atom_arg_triple_ } from '../_be_atom_arg_triple_/index.js'
+import { be_, be_arg_triple__new } from 'ctx-core/be'
 import { atom_ } from '../atom_/index.js'
 /** @typedef {import('@ctx-core/object').be__params_T}be__params_T */
 /** @typedef {import('@ctx-core/object').Ctx}Ctx */
@@ -14,7 +13,7 @@ export function be_atom_triple_(...arg_a) {
 		id,
 		atom__new,
 		be__params
-	] = _be_atom_arg_triple_(...arg_a)
+	] = be_arg_triple__new(...arg_a)
 	if (!atom__new) {
 		atom__new =
 			()=>

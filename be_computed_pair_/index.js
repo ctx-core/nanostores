@@ -1,5 +1,4 @@
-import { be_ } from '@ctx-core/object'
-import { _be_atom_arg_triple_ } from '../_be_computed_arg_triple_/index.js'
+import { be_, be_arg_triple__new } from 'ctx-core/be'
 /** @typedef {import('@ctx-core/object').be__params_T}be__params_T */
 /** @typedef {import('@ctx-core/object').Ctx}Ctx */
 /** @typedef {import('nanostores').ReadableAtom}ReadableAtom */
@@ -11,7 +10,7 @@ import { _be_atom_arg_triple_ } from '../_be_computed_arg_triple_/index.js'
 export function be_computed_pair_(...arg_a) {
 	const [id, computed__new, be__params] =
 		/** @type {[string, (ctx:Ctx)=>ReadableAtom, be__params_T]} */
-		_be_atom_arg_triple_(...arg_a)
+		be_arg_triple__new(...arg_a)
 	if (!computed__new) throw new Error('be_computed_pair_|computed__new argument is required')
 	const _be_ =
 		(be__params && be__params.be_)

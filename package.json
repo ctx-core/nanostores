@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/nanostores",
-	"version": "7.1.16",
+	"version": "8.0.0",
 	"description": "ctx-core nanostores",
 	"keywords": [
 		"ctx-core",
@@ -22,8 +22,6 @@
 		"*.d.ts",
 		"*.js",
 		"*.json",
-		"./_be_atom_arg_triple_",
-		"./_be_computed_arg_triple_",
 		"./_nanostores",
 		"./_types",
 		"./atom_",
