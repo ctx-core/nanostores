@@ -1,5 +1,15 @@
 # @ctx-core/nanostores
 
+## 7.1.15
+
+### Patch Changes
+
+- eslint: ^8.53.0 -> ^8.54.0
+- Updated dependencies
+  - @ctx-core/function@21.22.9
+  - @ctx-core/number@8.7.14
+  - @ctx-core/object@30.4.6
+
 ## 7.1.14
 
 ### Patch Changes
