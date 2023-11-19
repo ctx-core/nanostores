@@ -1,5 +1,32 @@
 # @ctx-core/nanostores
 
+## 9.0.0
+
+### Major Changes
+
+- - val**be*atom_triple*,val**be_atom_triple_T
+- be*atom_triple*,be*computed_pair*:
+
+      single argument: val__new
+      instantiates a WritableAtom_/ReadableAtom_
+      config delegates to:
+      	.config
+      	.oninit__def
+
+- - val**be*computed_pair*,val**be_computed_pair_T
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/object@31.0.0
+  - @ctx-core/function@21.22.12
+  - @ctx-core/number@8.7.17
+
 ## 8.0.1
 
 ### Patch Changes

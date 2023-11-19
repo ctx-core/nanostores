@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/nanostores",
-	"version": "8.0.1",
+	"version": "9.0.0",
 	"description": "ctx-core nanostores",
 	"keywords": [
 		"ctx-core",
@@ -42,8 +42,6 @@
 		"./setter_computed_",
 		"./subscribe_wait",
 		"./subscribe_wait_timeout",
-		"./val__be_atom_triple_",
-		"./val__be_computed_pair_",
 		"./writable_atom___mix"
 	],
 	"types": "./index.d.ts",
@@ -62,9 +60,9 @@
 		"test-unit-coverage": "c8 pnpm test-unit"
 	},
 	"dependencies": {
-		"@ctx-core/function": "^21.22.11",
-		"@ctx-core/number": "^8.7.16",
-		"@ctx-core/object": "^30.4.8",
+		"@ctx-core/function": "^21.22.12",
+		"@ctx-core/number": "^8.7.17",
+		"@ctx-core/object": "^31.0.0",
 		"nanostores": "btakita/nanostores#9f42323d8ddfa65a76851085f6a46a5e2fa51f1e"
 	},
 	"devDependencies": {

@@ -1,25 +1,21 @@
-import type { Be, be__params_T, Ctx, MapCtx } from '@ctx-core/object'
-import type { ReadableAtom, StoreValue, Task } from 'nanostores'
+import type { Be, be__val__new_T, Ctx } from '@ctx-core/object'
+import type { ReadableAtom, Task } from 'nanostores'
 import type { ReadableAtom_ } from '../_types/index.js'
+
 export declare function be_computed_pair_<
-	C extends ReadableAtom = ReadableAtom_<any>,
+	val_T,
+	computed_T extends ReadableAtom = ReadableAtom_<unknown>,
 	ctx_T extends Ctx = Ctx
->(
-	computed__new:(ctx:MapCtx)=>C,
-	be__params?:be__params_T
-):be_computed_pair_T<C, ctx_T>
-export declare function be_computed_pair_<
-	C extends ReadableAtom = ReadableAtom_<any>,
-	ctx_T extends Ctx = Ctx
->(
-	id:string|null|undefined,
-	computed__new:(ctx:MapCtx)=>C,
-	be__params?:be__params_T
-):be_computed_pair_T<C, ctx_T>
+>(val__new:be__val__new_T<val_T>):be_computed_pair_T<val_T, computed_T, ctx_T>
 export type be_computed_pair_T<
-	C extends ReadableAtom = ReadableAtom_<any>,
+	val_T,
+	computed_T extends ReadableAtom = ReadableAtom_<unknown>,
 	ctx_T extends Ctx = Ctx
 > = [
-	Be<C, ctx_T>,
-	(ctx:ctx_T)=>Task<StoreValue<C>>|StoreValue<C>
-]
+	Be<computed_T, ctx_T>,
+	(ctx:ctx_T)=>Task<val_T>|val_T
+]&{
+	config:(config__fn:(be:Be<computed_T>)=>unknown)=>be_computed_pair_T<val_T, computed_T, ctx_T>
+	oninit__def:(oninit:(computed:computed_T)=>unknown)=>be_computed_pair_T<val_T, computed_T, ctx_T>
+}
+
