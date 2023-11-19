@@ -1,11 +1,11 @@
 import { computed as nanostores__computed_ } from 'nanostores'
 import { readable_fn_ } from '../readable_fn_/index.js'
-/** @typedef {import('nanostores').AnyStore}AnyStore */
-/** @typedef {import('nanostores').ReadableAtom}ReadableAtom */
-/** @typedef {import('nanostores').Store}Store */
-/** @typedef {import('nanostores').StoreValue}StoreValue */
-/** @typedef {import('../_types/index.d.ts').ReadableAtom_}ReadableAtom_ */
-/** @typedef {import('../_types/index.d.ts').StoreValues}StoreValues */
+/** @typedef {import('nanostores').AnyStore} */
+/** @typedef {import('nanostores').ReadableAtom} */
+/** @typedef {import('nanostores').Store} */
+/** @typedef {import('nanostores').StoreValue} */
+/** @typedef {import('../_types/index.d.ts').ReadableAtom_} */
+/** @typedef {import('../_types/index.d.ts').StoreValues} */
 /**
  * @param {AnyStore[]|Store|any}stores
  * @param {((...values:StoreValues<unknown>)=>unknown)|((value:StoreValue<unknown>)=>unknown)}cb

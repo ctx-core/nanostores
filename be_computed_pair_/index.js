@@ -12,12 +12,12 @@ export function be_computed_pair_(val__new) {
 	const be_computed_pair = [
 		be_(ctx=>{
 			let computed$ = computed_(()=>val__new(ctx))
-			oninit?.(computed$)
+			oninit?.(ctx, computed$)
 			return computed$
 		}),
 		ctx=>be_computed_pair[0](ctx)(),
 	]
-	be_computed_pair.config = config__fn=>(config__fn(be_computed_pair[0]), be_computed_pair)
-	be_computed_pair.oninit__def = _oninit=>(oninit = _oninit, be_computed_pair)
+	be_computed_pair.config = params=>(be_computed_pair[0].config(params), be_computed_pair)
+	be_computed_pair.oninit = _oninit=>(oninit = _oninit, be_computed_pair)
 	return be_computed_pair
 }

@@ -1,4 +1,4 @@
-/** @typedef {import('../_types/index.d.ts').ReadonlyIfObject}ReadonlyIfObject */
+/** @typedef {import('../_types/index.d.ts').ReadonlyIfObject} */
 /**
  * @param {import('nanostores').ReadableAtom<unknown>}atom
  * @param {(value:ReadonlyIfObject<unknown>)=>void}listener

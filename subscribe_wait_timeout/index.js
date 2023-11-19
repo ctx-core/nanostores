@@ -1,6 +1,6 @@
 import { subscribe_wait } from '../subscribe_wait/index.js'
-/** @typedef {import('nanostores').ReadableAtom}ReadableAtom */
-/** @typedef {import('../_types/index.d.ts').ExtractReadableAtomValue}ExtractReadableAtomValue */
+/** @typedef {import('nanostores').ReadableAtom} */
+/** @typedef {import('../_types/index.d.ts').ExtractReadableAtomValue} */
 /**
  * @param {ReadableAtom<unknown>}store
  * @param {(val:ExtractReadableAtomValue<ReadableAtom<unknown>>)}condition_fn

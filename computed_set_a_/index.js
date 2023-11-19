@@ -1,5 +1,5 @@
 import { _atom_, _computed_ } from '../_nanostores/index.js'
-/** @typedef {import('../_types/index.d.ts').ReadableAtom_}ReadableAtom_ */
+/** @typedef {import('../_types/index.d.ts').ReadableAtom_} */
 /**
  * @param {unknown}initial
  * @param {typeof import('nanostores').computed}[__computed_]

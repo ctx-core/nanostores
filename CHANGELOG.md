@@ -11,7 +11,7 @@
       instantiates a WritableAtom_/ReadableAtom_
       config delegates to:
       	.config
-      	.oninit__def
+      	.oninit
 
 - - val**be*computed_pair*,val**be_computed_pair_T
 

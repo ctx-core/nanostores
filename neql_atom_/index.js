@@ -1,7 +1,7 @@
 import { _atom_, onSet } from '../_nanostores/index.js'
 import { writable_atom___mix } from '../writable_atom___mix/index.js'
-/** @typedef {import('nanostores').WritableAtom}WritableAtom */
-/** @typedef {import('../_types/index.d.ts').WritableAtom_}WritableAtom_ */
+/** @typedef {import('nanostores').WritableAtom} */
+/** @typedef {import('../_types/index.d.ts').WritableAtom_} */
 /**
  * @param {unknown}initial
  * @returns {WritableAtom_<unknown>}

@@ -1,11 +1,10 @@
-import { be_, ctx__new, type MapCtx } from '@ctx-core/object'
-import { eq } from 'ctx-core/all'
+import { ctx__new } from '@ctx-core/object'
 import { test } from 'uvu'
 import { equal } from 'uvu/assert'
-import { atom_, be_atom_triple_, be_computed_pair_, computed_, type ReadableAtom_ } from '../index.js'
+import { be_atom_triple_, be_computed_pair_, type ReadableAtom_ } from '../index.js'
 test('be_computed_pair_', ()=>{
 	const [
-		base$_,
+		,
 		base_,
 		base__set,
 	] = be_atom_triple_(()=>1)
@@ -22,23 +21,29 @@ test('be_computed_pair_', ()=>{
 	equal(foobar$_(ctx).$, 3)
 	equal(foobar_(ctx), 3)
 })
-test('be_computed_pair_|+id__set|+is_source__def|+oninit__def', ()=>{
+test('be_computed_pair_|+id|+is_source_|+oninit', ()=>{
 	const ctx = ctx__new()
 	const [
-		base$_,
+		,
 		base_,
 		base__set,
-	] = be_atom_triple_(()=>1).config(base$=>
-		base$.is_source__def(map_ctx=>map_ctx === ctx))
+	] = be_atom_triple_(()=>1)
+		.config({
+			is_source_: map_ctx=>map_ctx === ctx
+		})
 	const [
 		foobar$_,
 		foobar_,
 	] = be_computed_pair_<number, ReadableAtom_<number>&{ custom:string }>(ctx=>
 		base_(ctx) + 1)
-		.config(foobar$=>foobar$
-			.id__set('foobar')
-			.is_source__def(map_ctx=>map_ctx === ctx))
-		.oninit__def(foobar$=>foobar$.custom = 'custom-val')
+		.config({
+			id: 'foobar',
+			is_source_: map_ctx=>map_ctx === ctx,
+		})
+		.oninit((_ctx, foobar$)=>{
+			equal(_ctx, ctx)
+			foobar$.custom = 'custom-val'
+		})
 	equal(foobar$_([ctx__new(), ctx]).$, 2)
 	equal(foobar_([ctx__new(), ctx]), 2)
 	equal(foobar$_(ctx).$, 2)

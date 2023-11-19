@@ -1,5 +1,5 @@
-/** @typedef {import('nanostores').WritableAtom}WritableAtom */
-/** @typedef {import('../_types/index.d.ts').WritableAtom_}WritableAtom_ */
+/** @typedef {import('nanostores').WritableAtom} */
+/** @typedef {import('../_types/index.d.ts').WritableAtom_} */
 /**
  * @param {WritableAtom<unknown>}writable_atom
  * @returns {WritableAtom_<unknown>}
