@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 9.0.1
+
+### Patch Changes
+
+- readable*fn*: Proxy: format
+
 ## 9.0.0
 
 ### Major Changes
