@@ -15,8 +15,8 @@ export function readable_fn_(computed) {
 			}
 			return Reflect.get(computed, prop, computed)
 		},
-		set(target, prop, val, receiver) {
-			return Reflect.set(computed, prop, val, receiver)
+		set(target, prop, val) {
+			return Reflect.set(computed, prop, val, computed)
 		},
 	})
 }

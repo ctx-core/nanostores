@@ -1,6 +1,6 @@
 import { test } from 'uvu'
 import { equal, is } from 'uvu/assert'
-import { atom_, computed_, ReadableAtom_ } from '../index.js'
+import { atom_, computed_, type ReadableAtom_ } from '../index.js'
 test('computed_()()', ()=>{
 	const letter$ = atom_('a')
 	const number$ = atom_(0)
