@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/nanostores",
-	"version": "9.0.4",
+	"version": "9.0.5",
 	"description": "ctx-core nanostores",
 	"keywords": [
 		"ctx-core",
@@ -72,7 +72,7 @@
 		"check-dts": "^0.7.2",
 		"eslint": "^8.54.0",
 		"tsx": "^4.1.4",
-		"typescript": "^5.3.0-dev.20230829",
+		"typescript": "^5.3.2",
 		"uvu": "^0.5.6"
 	},
 	"publishConfig": {
