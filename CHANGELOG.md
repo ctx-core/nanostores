@@ -1,5 +1,15 @@
 # @ctx-core/nanostores
 
+## 9.0.10
+
+### Patch Changes
+
+- tsx: ^4.3.0 -> ^4.4.0
+- Updated dependencies
+  - @ctx-core/function@21.22.20
+  - @ctx-core/number@8.7.25
+  - @ctx-core/object@31.1.6
+
 ## 9.0.9
 
 ### Patch Changes
