@@ -1,5 +1,13 @@
 # @ctx-core/nanostores
 
+## 9.0.34
+
+### Patch Changes
+
+- @ctx-core/object: ^31.1.28 -> ^31.1.29
+- @ctx-core/number: ^8.7.47 -> ^8.7.48
+- @ctx-core/function: ^21.24.1 -> ^21.24.2
+
 ## 9.0.33
 
 ### Patch Changes
