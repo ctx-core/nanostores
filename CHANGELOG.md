@@ -1,5 +1,27 @@
 # @ctx-core/nanostores
 
+## 10.0.0
+
+### Major Changes
+
+- major: ctx: + ns:
+
+      exports: + ctx-core/be
+      be_atom_triple_:
+      be_atom_triple_T:
+      be_computed_pair_:
+      be_computed_pair_T:
+      	generics: + ns_T
+      + ∋ ctx-core
+      - ∋ @ctx-core/function
+      - ∋ @ctx-core/number
+      - ∋ @ctx-core/object
+
+### Patch Changes
+
+- Updated dependencies
+  - ctx-core@5.0.0
+
 ## 9.0.38
 
 ### Patch Changes
