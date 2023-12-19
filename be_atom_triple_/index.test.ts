@@ -1,4 +1,5 @@
-import { be_, ctx__new } from '@ctx-core/object'
+import { be_, ctx__new, type Ctx_wide_T, ns_ctx__new } from 'ctx-core/object'
+import type { Equal, Expect } from 'ctx-core/test'
 import { test } from 'uvu'
 import { equal } from 'uvu/assert'
 import { atom_, be_atom_triple_, type WritableAtom_ } from '../index.js'
@@ -7,7 +8,12 @@ test('be_atom_triple_', ()=>{
 		foobar$_,
 		foobar_,
 		foobar__set,
-	] = be_atom_triple_(()=>1)
+	] = be_atom_triple_(ctx=>{
+		/* eslint-disable @typescript-eslint/no-unused-vars */
+		type test_ctx = Expect<Equal<typeof ctx, Ctx_wide_T<''>>>
+		/* eslint-enable @typescript-eslint/no-unused-vars */
+		return 1
+	})
 	const ctx = ctx__new()
 	equal(foobar$_(ctx).$, 1)
 	equal(foobar_(ctx), 1)
@@ -17,56 +23,64 @@ test('be_atom_triple_', ()=>{
 	equal(foobar_(ctx), 2)
 	equal(foobar_(ctx), 2)
 })
-test('be_atom_triple_|+id|+is_source_', ()=>{
-	const ctx = ctx__new()
+test('be_atom_triple_|+id|+ns', ()=>{
+	const ctx = ns_ctx__new('test_ns')
 	const [
 		foobar$_,
 		foobar_,
 		foobar__set,
-	] = be_atom_triple_<number, custom_T>(()=>1, {
+	] = be_atom_triple_<number, 'test_ns', custom_T>(ctx=>{
+		/* eslint-disable @typescript-eslint/no-unused-vars */
+		type test_ctx = Expect<Equal<typeof ctx, Ctx_wide_T<'test_ns'>>>
+		/* eslint-enable @typescript-eslint/no-unused-vars */
+		return 1
+	}, {
 		id: 'foobar',
-		is_source_: map_ctx=>map_ctx === ctx,
+		ns: 'test_ns',
 	})
-	equal(foobar$_([ctx__new(), ctx]).$, 1)
-	equal(foobar_([ctx__new(), ctx]), 1)
+	equal(foobar$_(ns_ctx__new(ctx__new(), ctx)).$, 1)
+	equal(foobar_(ns_ctx__new(ctx__new(), ctx)), 1)
 	equal(foobar$_(ctx).$, 1)
 	equal(foobar_(ctx), 1)
-	equal((ctx.get('foobar') as WritableAtom_<number>).$, 1)
-	foobar__set([ctx__new(), ctx], 2)
-	equal(foobar$_([ctx__new(), ctx]).$, 2)
-	equal(foobar_([ctx__new(), ctx]), 2)
+	equal((ctx.s.test_ns.get('foobar') as WritableAtom_<number>).$, 1)
+	foobar__set(ns_ctx__new(ctx__new(), ctx), 2)
+	equal(foobar$_(ns_ctx__new(ctx__new(), ctx)).$, 2)
+	equal(foobar_(ns_ctx__new(ctx__new(), ctx)), 2)
 	equal(foobar$_(ctx).$, 2)
 	equal(foobar_(ctx), 2)
-	equal((ctx.get('foobar') as WritableAtom_<number>).$, 2)
+	equal((ctx.s.test_ns.get('foobar') as WritableAtom_<number>).$, 2)
 })
 test('be_atom_triple_|be', ()=>{
-	const ctx = ctx__new()
+	const ctx = ns_ctx__new('test_ns')
 	const [
 		foobar$_,
 		foobar_,
 		foobar__set,
-	] = be_atom_triple_<number, custom_T>(be_(ctx=>{
+	] = be_atom_triple_<number, 'test_ns', custom_T>(be_(ctx=>{
+		/* eslint-disable @typescript-eslint/no-unused-vars */
+		type test_ctx = Expect<Equal<typeof ctx, Ctx_wide_T<'test_ns'>>>
+		/* eslint-enable @typescript-eslint/no-unused-vars */
 		const foobar$ = atom_(1) as custom_T
 		foobar$.custom = 'custom-val'
 		return foobar$
 	}, {
 		id: 'foobar',
-		is_source_: map_ctx=>map_ctx === ctx,
+		ns: 'test_ns',
 	}))
-	equal(foobar$_([ctx__new(), ctx]).$, 1)
-	equal(foobar_([ctx__new(), ctx]), 1)
+	equal(foobar$_(ns_ctx__new(ctx__new(), ctx)).$, 1)
+	equal(foobar_(ns_ctx__new(ctx__new(), ctx)), 1)
 	equal(foobar$_(ctx).$, 1)
 	equal(foobar_(ctx), 1)
-	equal((ctx.get('foobar') as WritableAtom_<number>).$, 1)
-	equal(foobar$_([ctx__new(), ctx]).custom, 'custom-val')
+	equal((ctx.s.test_ns.get('foobar') as WritableAtom_<number>).$, 1)
+	equal(foobar$_(ns_ctx__new(ctx__new(), ctx)).custom, 'custom-val')
 	equal(foobar$_(ctx).custom, 'custom-val')
-	foobar__set([ctx__new(), ctx], 2)
-	equal(foobar$_([ctx__new(), ctx]).$, 2)
-	equal(foobar_([ctx__new(), ctx]), 2)
+	foobar__set(ns_ctx__new(ctx__new(), ctx), 2)
+	equal(foobar$_(ns_ctx__new(ctx__new(), ctx)).$, 2)
+	equal(foobar_(ns_ctx__new(ctx__new(), ctx)), 2)
 	equal(foobar$_(ctx).$, 2)
 	equal(foobar_(ctx), 2)
-	equal((ctx.get('foobar') as WritableAtom_<number>).$, 2)
-	equal(foobar$_([ctx__new(), ctx]).custom, 'custom-val')
+	equal((ctx.s.test_ns.get('foobar') as WritableAtom_<number>).$, 2)
+	equal(foobar$_(ns_ctx__new(ctx__new(), ctx)).custom, 'custom-val')
 	equal(foobar$_(ctx).custom, 'custom-val')
 })
 test.run()

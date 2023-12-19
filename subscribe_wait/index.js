@@ -1,5 +1,5 @@
-import { promise_timeout } from '@ctx-core/function'
-import { isNumber_ } from '@ctx-core/number'
+import { promise_timeout } from 'ctx-core/function'
+import { isNumber_ } from 'ctx-core/number'
 /** @typedef {import('nanostores').ReadableAtom} */
 /** @typedef {import('../_types/index.d.ts').ExtractReadableAtomValue} */
 /**
@@ -26,6 +26,6 @@ export function subscribe_wait(
 	})
 	return (
 		isNumber_(timeout)
-		? promise_timeout(_subscribe_wait, timeout)
-		: _subscribe_wait)
+			? promise_timeout(_subscribe_wait, timeout)
+			: _subscribe_wait)
 }

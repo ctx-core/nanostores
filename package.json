@@ -59,9 +59,7 @@
 		"test-unit-coverage": "c8 pnpm test-unit"
 	},
 	"dependencies": {
-		"@ctx-core/function": "^21.24.6",
-		"@ctx-core/number": "^8.7.52",
-		"@ctx-core/object": "^31.1.33",
+		"ctx-core": "^4.19.0",
 		"nanostores": "btakita/nanostores#9f42323d8ddfa65a76851085f6a46a5e2fa51f1e"
 	},
 	"devDependencies": {

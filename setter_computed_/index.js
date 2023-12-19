@@ -1,4 +1,4 @@
-import { run } from '@ctx-core/function'
+import { run } from 'ctx-core/function'
 import { atom, onMount, onStop } from 'nanostores'
 import { computed_ } from '../computed_/index.js'
 /** @type {import('./index.d.ts').setter_computed__T} */
@@ -15,9 +15,9 @@ export const setter_computed_ = (stores, cb)=>{
 	let cb__run = store_val_a=>{
 		return cb(
 			isArray
-			? store_val_a
+				? store_val_a
 				|| store_a.map(()=>undefined)
-			: store_val_a && store_val_a[0],
+				: store_val_a && store_val_a[0],
 			val=>{
 				return_payload_atom.set(val)
 			})

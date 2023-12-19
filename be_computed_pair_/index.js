@@ -1,10 +1,8 @@
+/// <reference types="ctx-core" />
+/// <reference types="./index.d.ts" />
 import { be_ } from 'ctx-core/be'
 import { computed_ } from '../computed_/index.js'
-/** @typedef {import('@ctx-core/object').Be} */
-/** @typedef {import('@ctx-core/object').be_config_T} */
-/** @typedef {import('@ctx-core/object').be__val__new_T} */
 /** @typedef {import('nanostores').ReadableAtom}ReadableAtom */
-/** @typedef {import('./index.d.ts').be_computed_pair_T} */
 /**
  * @returns {be_computed_pair_T}
  * @private
