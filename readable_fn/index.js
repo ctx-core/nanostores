@@ -1,8 +1,7 @@
-/** @typedef {import('nanostores').ReadableAtom} */
-/** @typedef {import('../_types/index.d.ts').ReadableAtom_} */
+/// <reference types="../_types/index.d.ts" />
 /**
- * @param {ReadableAtom<unknown>}computed
- * @returns {ReadableAtom_<unknown>}
+ * @param {import('nanostores').ReadableAtom<unknown>}computed
+ * @returns {import('nanostores').ReadableAtom_<unknown>}
  * @private
  */
 export function readable_fn_(computed) {
