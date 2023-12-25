@@ -1,5 +1,5 @@
-import { computed_set_a_ } from '../computed_set_a_/index.js'
-import { mix_computed_ } from '../computed_/index.js'
+import { computed_set_a_ } from '../computed_set_a/index.js'
+import { mix_computed_ } from '../computed/index.js'
 import { _computed_ } from '../_nanostores/index.js'
 /**
  * @param {unknown}initial

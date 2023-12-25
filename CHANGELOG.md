@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 10.0.13
+
+### Patch Changes
+
+- remove \_ suffix from some directories
+
 ## 10.0.12
 
 ### Patch Changes

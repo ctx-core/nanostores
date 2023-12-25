@@ -1,5 +1,5 @@
 import { computed as nanostores__computed_ } from 'nanostores'
-import { readable_fn_ } from '../readable_fn_/index.js'
+import { readable_fn_ } from '../readable_fn/index.js'
 /** @typedef {import('nanostores').AnyStore} */
 /** @typedef {import('nanostores').ReadableAtom} */
 /** @typedef {import('nanostores').Store} */

@@ -1,7 +1,7 @@
 /// <reference types="ctx-core" />
 /// <reference types="./index.d.ts" />
 import { be_ } from 'ctx-core/be'
-import { atom_ } from '../atom_/index.js'
+import { atom_ } from '../atom/index.js'
 /** @typedef {import('nanostores').WritableAtom}WritableAtom */
 /**
  * @param {Be<WritableAtom>|be__val__new_T<unknown>}be_OR_val__new

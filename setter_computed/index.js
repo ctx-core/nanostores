@@ -1,6 +1,6 @@
 import { run } from 'ctx-core/function'
 import { atom, onMount, onStop } from 'nanostores'
-import { computed_ } from '../computed_/index.js'
+import { computed_ } from '../computed/index.js'
 /** @type {import('./index.d.ts').setter_computed__T} */
 export const setter_computed_ = (stores, cb)=>{
 	const isArray = Array.isArray(stores)

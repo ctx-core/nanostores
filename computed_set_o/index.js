@@ -1,5 +1,5 @@
 import { _computed_ } from '../_nanostores/index.js'
-import { computed_set_a_ } from '../computed_set_a_/index.js'
+import { computed_set_a_ } from '../computed_set_a/index.js'
 /**
  * @param {unknown}initial
  * @param {typeof import('nanostores').computed}__computed_

@@ -1,5 +1,5 @@
 import { atom } from 'nanostores'
-import { readable_fn_ } from '../readable_fn_/index.js'
+import { readable_fn_ } from '../readable_fn/index.js'
 /**
  * @param {unknown}initial
  * @returns {import('./index.d.ts').atom_pair_T<unknown>}

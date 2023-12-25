@@ -1,6 +1,6 @@
-import { mix_computed_ } from '../computed_/index.js'
+import { mix_computed_ } from '../computed/index.js'
 import { _computed_ } from '../_nanostores/index.js'
-import { computed__set_a_ } from '../computed__set_a_/index.js'
+import { computed__set_a_ } from '../computed__set_a/index.js'
 /**
  * @param {unknown}initial
  * @param {typeof import('nanostores').computed}__computed_
