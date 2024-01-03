@@ -1,4 +1,4 @@
-import { run } from 'ctx-core/function'
+import { run } from 'ctx-core/run'
 import { atom, onMount, onStop } from 'nanostores'
 import { computed_ } from '../computed/index.js'
 /** @type {import('./index.d.ts').setter_computed__T} */
