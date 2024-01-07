@@ -1,6 +1,5 @@
 import type { Be, be__val__new_T, be_config_T, Ctx, ctx__be_T, ctx__get_T, Ctx_wide_T } from 'ctx-core/object'
-import type { ReadableAtom, Store, StoreValue, Task } from 'nanostores'
-import type { AnyStore } from 'nanostores/map'
+import type { AnyStore, ReadableAtom, Store, StoreValue, Task } from 'nanostores'
 import type { ReadableAtom_, StoreValues } from '../_types/index.js'
 export declare function be_computed_pair_<
 	val_T,

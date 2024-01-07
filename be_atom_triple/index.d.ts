@@ -6,7 +6,7 @@ export declare function be_atom_triple_<
 	ns_T extends string = '',
 	atom_T extends WritableAtom<val_T> = WritableAtom_<val_T>,
 	ctx_T extends Ctx = Ctx_wide_T<ns_T>
->(be: Be<atom_T, ns_T, ctx_T>):be_atom_triple_T<val_T, ns_T, atom_T, ctx_T>
+>(be:Be<atom_T, ns_T, ctx_T>):be_atom_triple_T<val_T, ns_T, atom_T, ctx_T>
 export declare function be_atom_triple_<
 	val_T,
 	ns_T extends string = '',
