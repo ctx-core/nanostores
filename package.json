@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/nanostores",
-	"version": "10.0.26",
+	"version": "10.0.27",
 	"description": "ctx-core nanostores",
 	"keywords": [
 		"ctx-core",
@@ -60,7 +60,7 @@
 		"test:unit:coverage": "c8 pnpm test:unit"
 	},
 	"dependencies": {
-		"ctx-core": "^5.16.1",
+		"ctx-core": "^5.16.2",
 		"nanostores": "btakita/nanostores#9f42323d8ddfa65a76851085f6a46a5e2fa51f1e"
 	},
 	"devDependencies": {
