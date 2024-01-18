@@ -1,5 +1,13 @@
 # @ctx-core/nanostores
 
+## 10.0.49
+
+### Patch Changes
+
+- be*atom_triple*,be*computed_pair*: arguments: config:
+
+      required when ns is defined
+
 ## 10.0.48
 
 ### Patch Changes
