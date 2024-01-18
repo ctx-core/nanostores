@@ -1,4 +1,4 @@
-import type { Be, be_config_T, Ctx, ctx__be_T, ctx__get_T, ctx__set_T, Ctx_wide_T } from 'ctx-core/object'
+import type { Be, be_config_T, ctx__be_T, ctx__get_T, ctx__set_T, Ctx_wide_T } from 'ctx-core/object'
 import type { WritableAtom } from 'nanostores'
 import type { WritableAtom_ } from '../_types/index.js'
 export declare function be_atom_triple_<

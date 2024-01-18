@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 10.0.48
+
+### Patch Changes
+
+- fix: type errors
+
 ## 10.0.47
 
 ### Patch Changes
