@@ -63,7 +63,7 @@ test('be_computed_pair_|-autosubscribe|+id|+ns', ()=>{
 	const [
 		foobar$_,
 		foobar_,
-	] = be_computed_pair_(
+	] = be_computed_pair_<number, 'test_ns'>(
 		ctx=>{
 			/* eslint-disable @typescript-eslint/no-unused-vars */
 			type test_ctx = Expect<Equal<typeof ctx, Ctx_wide_T<'test_ns'>>>
@@ -103,7 +103,7 @@ test('be_computed_pair_|+autosubscribe|+id|+is_ns_', ()=>{
 	const [
 		foobar$_,
 		foobar_,
-	] = be_computed_pair_(ctx=>{
+	] = be_computed_pair_<number, 'test_ns'>(ctx=>{
 		/* eslint-disable @typescript-eslint/no-unused-vars */
 		type test_ctx = Expect<Equal<typeof ctx, Ctx_wide_T<'test_ns'>>>
 		/* eslint-enable @typescript-eslint/no-unused-vars */
