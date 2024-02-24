@@ -1,5 +1,13 @@
 # @ctx-core/nanostores
 
+## 10.0.93
+
+### Patch Changes
+
+- eslint: ^8.56.0 -> ^8.57.0
+- Updated dependencies
+  - ctx-core@6.4.5
+
 ## 10.0.92
 
 ### Patch Changes
