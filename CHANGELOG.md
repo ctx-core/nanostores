@@ -1,5 +1,11 @@
 # @ctx-core/nanostores
 
+## 10.0.101
+
+### Patch Changes
+
+- ctx-core: ^6.5.5 -> ^6.5.6
+
 ## 10.0.100
 
 ### Patch Changes
