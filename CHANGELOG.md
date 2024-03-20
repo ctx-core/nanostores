@@ -1,5 +1,13 @@
 # @ctx-core/nanostores
 
+## 10.0.107
+
+### Patch Changes
+
+- package.json: author: url,email
+- Updated dependencies
+  - ctx-core@6.6.1
+
 ## 10.0.106
 
 ### Patch Changes
