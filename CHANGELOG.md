@@ -1,5 +1,13 @@
 # @ctx-core/nanostores
 
+## 10.0.148
+
+### Patch Changes
+
+- typescript: ^5.4.5 -> ^5.5.2
+- Updated dependencies
+  - ctx-core@7.2.23
+
 ## 10.0.147
 
 ### Patch Changes
