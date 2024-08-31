@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/nanostores",
-	"version": "10.0.155",
+	"version": "10.0.156",
 	"description": "ctx-core nanostores",
 	"keywords": [
 		"ctx-core",
@@ -64,16 +64,16 @@
 		"disable:test:unit:coverage": "c8 pnpm test:unit"
 	},
 	"dependencies": {
-		"ctx-core": "^7.2.30",
+		"ctx-core": "^7.2.31",
 		"nanostores": "btakita/nanostores#9f42323d8ddfa65a76851085f6a46a5e2fa51f1e"
 	},
 	"devDependencies": {
-		"@sinonjs/fake-timers": "^11.2.2",
+		"@sinonjs/fake-timers": "^13.0.1",
 		"@types/sinonjs__fake-timers": "^8.1.5",
 		"c8": "^10.1.2",
-		"check-dts": "^0.8.0",
-		"eslint": "^9.9.0",
-		"tsx": "^4.17.0",
+		"check-dts": "^0.8.2",
+		"eslint": "^9.9.1",
+		"tsx": "^4.19.0",
 		"typescript": "^5.5.4",
 		"uvu": "^0.5.6"
 	},

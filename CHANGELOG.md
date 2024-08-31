@@ -1,5 +1,16 @@
 # @ctx-core/nanostores
 
+## 10.0.156
+
+### Patch Changes
+
+- eslint: ^9.9.0 -> ^9.9.1
+- @sinonjs/fake-timers: ^11.2.2 -> ^13.0.1
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - ctx-core@7.2.31
+
 ## 10.0.155
 
 ### Patch Changes
