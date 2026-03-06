@@ -1,5 +1,13 @@
 # @ctx-core/nanostores
 
+## 10.0.159
+
+### Patch Changes
+
+- chore: migrate scripts from pnpm to bun
+- Updated dependencies
+  - ctx-core@7.2.34
+
 ## 10.0.158
 
 ### Patch Changes
